@@ -7,7 +7,7 @@
 
     <title>Light Bootstrap Dashboard PRO by Creative Tim</title>
 
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalabel=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
 
 
@@ -28,6 +28,8 @@
     <link href="lbd/lib/chosen/ImageSelect.css" type="text/css" rel="stylesheet" />
     <!-- Tags -->
     <link rel="StyleSheet" href="lbd/lib/jquery-tageditor-master/jquery.tag-editor.css" type="text/css" />
+    <!-- flickity -->
+    <link href="lbd/lib/flickity/css/flickity.css" type="text/css" rel="stylesheet" />
     <!-- Temporary css for Layouts     -->
     
 </head>
@@ -794,18 +796,18 @@
                                             <li class="decks">
                                                 <div class="row">
                                                     <div class="col-md-12 deck-header">
-                                                        <div class="col-md-5 date-summary">
+                                                        <div class="col-md-6 date-summary">
                                                             May 08 <span class="summary">-</span>
                                                         </div>
-                                                        <div class="col-md-5 select-container pull-right">
+                                                        <div class="col-md-6 select-container">
                                                             <span>100 card(s) selected</span><a href="javascript:;">Select all cards</a>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-12 deck-header">
-                                                        <div class="col-md-5 date-summary">
+                                                        <div class="col-md-6 date-summary">
                                                             Jul 14 <span class="summary">120 articles - 3000.00 &#8364;</span>
                                                         </div>
-                                                        <div class="col-md-5 select-container pull-right">
+                                                        <div class="col-md-6 select-container">
                                                             <span>100 card(s) selected</span><a class="active" href="javascript:;">Deselect all</a>
                                                         </div>
                                                     </div>
@@ -890,13 +892,14 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="card card-wrap card-box">
+                                                
+                                                <div class="card card-wrap card-box draft">
                                                     <div class="row">
                                                         <div class="col-md-12 card-header">
-                                                            <div class="col-md-2 card-icon">
-                                                                <i class="material-icons">label</i>
+                                                            <div class="col-md-3 card-label">
+                                                                <span class="label paused">draft</span>
                                                             </div>
-                                                            <div class="col-md-6 header">Recruitment</div>
+                                                            
                                                             <div class="col-md-3 check-card pull-right">
                                                                 <label class="checkbox">
                                                                     <input type="checkbox" data-toggle="checkbox" value="">
@@ -905,116 +908,21 @@
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-md-12 card-title">Webedia blog e-sport trends recruitment</div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12 card-body no-user">
-                                                            <div class="open-card">
-                                                                <a href="recruitemnt.html">
-                                                                    <i class="material-icons">add</i>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12 card-body one-user">
-                                                            <div class="card-user">
-                                                                <img src="lbd/img/default-avatar.png" class="img-circle" />
-                                                            </div>
-                                                            <div class="open-card">
-                                                                <a href="recruitemnt.html">
-                                                                    <i class="material-icons">add</i>
-                                                                </a>
-                                                            </div>
-                                                        </div>
+                                                        <div class="col-md-12 card-title draft">Webedia blog e-sport trends recruitment</div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-12 card-body two-user">
                                                             <div class="card-user chevron">
-                                                                <img src="lbd/img/default-avatar.png" class="img-circle" />
+                                                                <div class="card-user-empty writer">
+                                                                    Wr
+                                                                </div>
                                                             </div>
                                                             <div class="card-user">
-                                                                <img src="lbd/img/default-avatar.png" class="img-circle" />
+                                                                <div class="card-user-empty proofreader">
+                                                                    Pr
+                                                                </div>
                                                             </div>
-                                                            <div class="open-card">
-                                                                <a href="recruitemnt.html">
-                                                                    <i class="material-icons">add</i>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12 card-footer">
-                                                            <div class="col-md-6 card-details">
-                                                                <span>Hiring</span> 40 persons
-                                                            </div>
-                                                            <div class="col-md-6 card-details">
-                                                                <span>Status</span> Not Started
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card card-wrap card-box">
-                                                    <div class="row">
-                                                        <div class="col-md-12 card-header">
-                                                            <div class="col-md-2 card-icon">
-                                                                <i class="material-icons">beenhere</i>
-                                                            </div>
-                                                            <div class="col-md-6 header">Job</div>
-                                                            <div class="col-md-3 check-card pull-right">
-                                                                <label class="checkbox">
-                                                                    <input type="checkbox" data-toggle="checkbox" value="">
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12 card-title">Webedia blog e-sport trends recruitment</div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12 card-body no-user">
-                                                            <div class="open-card">
-                                                                <a href="recruitemnt.html">
-                                                                    <i class="material-icons">add</i>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12 card-footer">
-                                                            <div class="col-md-6 card-details">
-                                                                <span>Hiring</span> 40 persons
-                                                            </div>
-                                                            <div class="col-md-6 card-details">
-                                                                <span>Status</span> Not Started
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card card-wrap card-box">
-                                                    <div class="row">
-                                                        <div class="col-md-12 card-header">
-                                                            <div class="col-md-2 card-icon">
-                                                                <span class="label paused">draft</span>
-                                                            </div>
-                                                            <div class="col-md-6 header"></div>
-                                                            <div class="col-md-3 check-card pull-right">
-                                                                <label class="checkbox">
-                                                                    <input type="checkbox" data-toggle="checkbox" value="">
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12 card-title">Webedia blog e-sport trends recruitment</div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12 card-body no-user">
-                                                            <div class="open-card">
-                                                                <a href="recruitemnt.html">
-                                                                    <i class="material-icons">add</i>
-                                                                </a>
-                                                            </div>
+                                                            
                                                         </div>
                                                     </div>
                                                     <div class="row">
@@ -1029,51 +937,10 @@
                                                 <div class="card card-wrap card-box">
                                                     <div class="row">
                                                         <div class="col-md-12 card-header">
-                                                            <div class="col-md-2 card-icon">
-                                                                <span class="label paused">draft</span>
-                                                            </div>
-                                                            <div class="col-md-6 header"></div>
-                                                            <div class="col-md-3 check-card pull-right">
-                                                                <label class="checkbox">
-                                                                    <input type="checkbox" data-toggle="checkbox" value="">
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12 card-title text-center">Webedia blog e-sport trends recruitment</div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12 card-body two-user">
-                                                            <div class="card-user chevron">
-                                                                <img src="lbd/img/default-avatar.png"  alt="" class="img-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User Name" />
-                                                            </div>
-                                                            <div class="card-user">
-                                                                <img src="lbd/img/default-avatar.png"  alt="" class="img-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User Name" />
-                                                            </div>
-                                                            <div class="open-card">
-                                                                <a href="recruitemnt.html">
-                                                                    <i class="material-icons">add</i>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12 card-footer">
-                                                            <div class="col-md-12 card-details">
-                                                                <span>Volume</span> Not defined
+                                                            <div class="col-md-3 card-label">
+                                                                <span class="label default">bidding</span>
                                                             </div>
                                                             
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card card-wrap card-box">
-                                                    <div class="row">
-                                                        <div class="col-md-12 card-header">
-                                                            <div class="col-md-2 card-icon">
-                                                                <span class="label paused">draft</span>
-                                                            </div>
-                                                            <div class="col-md-6 header"></div>
                                                             <div class="col-md-3 check-card pull-right">
                                                                 <label class="checkbox">
                                                                     <input type="checkbox" data-toggle="checkbox" value="">
@@ -1082,7 +949,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-md-12 card-title text-center">Webedia blog e-sport trends recruitment</div>
+                                                        <div class="col-md-12 card-title text-center"><a href="javascript:void(0)">Webedia blog e-sport trends recruitment</a></div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-12 card-body two-user">
@@ -1093,57 +960,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="card-user">
-                                                                <div class="card-user-empty proofreader">
-                                                                    Pr
-                                                                    <span class="notification">14</span>
-                                                                </div>
-                                                            </div>
-                                                            <div class="open-card">
-                                                                <a href="recruitemnt.html">
-                                                                    <i class="material-icons">add</i>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12 card-footer">
-                                                            <div class="col-md-12 card-details">
-                                                                <span>Volume</span> Not defined
-                                                            </div>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card card-wrap card-box">
-                                                    <div class="row">
-                                                        <div class="col-md-12 card-header">
-                                                            <div class="col-md-2 card-icon">
-                                                                <span class="label default">bidding</span>
-                                                            </div>
-                                                            <div class="col-md-6 header"></div>
-                                                            <div class="col-md-3 check-card pull-right">
-                                                                <label class="checkbox">
-                                                                    <input type="checkbox" data-toggle="checkbox" value="">
-                                                                </label>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12 card-title text-center">Webedia blog e-sport trends recruitment</div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12 card-body two-user">
-                                                            <div class="card-user chevron">
-                                                                <img src="lbd/img/default-avatar.png"  alt="" class="img-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User Name" />
-                                                                
-                                                            </div>
-                                                            <div class="card-user">
-                                                                <img src="lbd/img/default-avatar.png"  alt="" class="img-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User Name" />
-                                                            </div>
-                                                            <div class="open-card">
-                                                                <a href="recruitemnt.html">
-                                                                    <i class="material-icons">add</i>
-                                                                </a>
+                                                                <img src="lbd/img/default-avatar.png"  alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="" data-original-title="User Name" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1159,10 +976,10 @@
                                                 <div class="card card-wrap card-box">
                                                     <div class="row">
                                                         <div class="col-md-12 card-header">
-                                                            <div class="col-md-2 card-icon">
-                                                                <span class="label ongoing">production</span>
+                                                            <div class="col-md-3 card-label">
+                                                                <span class="label default">correct</span>
                                                             </div>
-                                                            <div class="col-md-6 header"></div>
+                                                            
                                                             <div class="col-md-3 check-card pull-right">
                                                                 <label class="checkbox">
                                                                     <input type="checkbox" data-toggle="checkbox" value="">
@@ -1171,22 +988,18 @@
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-md-12 card-title text-center">Webedia blog e-sport trends recruitment</div>
+                                                        <div class="col-md-12 card-title text-center"><a href="javascript:void(0)">Webedia blog e-sport trends recruitment</a></div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-12 card-body two-user">
                                                             <div class="card-user chevron">
-                                                                <img src="lbd/img/default-avatar.png"  alt="" class="img-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User Name" />
+                                                                <img src="lbd/img/default-avatar.png"  alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="" data-original-title="User Name" />
                                                                 
                                                             </div>
                                                             <div class="card-user">
-                                                                <img src="lbd/img/default-avatar.png" alt="" class="img-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User Name">
+                                                                <img src="lbd/img/default-avatar.png" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="" data-original-title="User Name">
                                                             </div>
-                                                            <div class="open-card">
-                                                                <a href="recruitemnt.html">
-                                                                    <i class="material-icons">add</i>
-                                                                </a>
-                                                            </div>
+                                                            
                                                         </div>
                                                     </div>
                                                     <div class="row">
@@ -1195,7 +1008,7 @@
                                                                 <span>Volume</span> 40 Articles
                                                             </div>
                                                             <div class="col-md-6 card-details">
-                                                                <span>Volume</span> 40 Articles
+                                                                <span>Time left</span> 12:59:31
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1203,10 +1016,10 @@
                                                 <div class="card card-wrap card-box">
                                                     <div class="row">
                                                         <div class="col-md-12 card-header">
-                                                            <div class="col-md-2 card-icon">
+                                                            <div class="col-md-3 card-label">
                                                                 <span class="label delete">delivered</span>
                                                             </div>
-                                                            <div class="col-md-6 header"></div>
+                                                            
                                                             <div class="col-md-3 check-card pull-right">
                                                                 <label class="checkbox">
                                                                     <input type="checkbox" data-toggle="checkbox" value="">
@@ -1215,16 +1028,16 @@
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-md-12 card-title text-center">Webedia blog e-sport trends recruitment</div>
+                                                        <div class="col-md-12 card-title text-center"><a href="javascript:void(0)">Webedia blog e-sport trends recruitment</a></div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-12 card-body two-user">
                                                             <div class="card-user chevron">
-                                                                <img src="lbd/img/default-avatar.png"  alt="" class="img-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User Name" />
+                                                                <img src="lbd/img/default-avatar.png"  alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="" data-original-title="User Name" />
                                                                 
                                                             </div>
                                                             <div class="card-user">
-                                                                <img src="lbd/img/default-avatar.png" alt="" class="img-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User Name">
+                                                                <img src="lbd/img/default-avatar.png" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="" data-original-title="User Name">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1242,10 +1055,10 @@
                                                 <div class="card card-wrap card-box">
                                                     <div class="row">
                                                         <div class="col-md-12 card-header">
-                                                            <div class="col-md-2 card-icon">
+                                                            <div class="col-md-3 card-label">
                                                                 <span class="label ongoing">validated</span>
                                                             </div>
-                                                            <div class="col-md-6 header"></div>
+                                                            
                                                             <div class="col-md-3 check-card pull-right">
                                                                 <label class="checkbox">
                                                                     <input type="checkbox" data-toggle="checkbox" value="">
@@ -1254,16 +1067,16 @@
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-md-12 card-title text-center">Webedia blog e-sport trends recruitment</div>
+                                                        <div class="col-md-12 card-title text-center"><a href="javascript:void(0)">Webedia blog e-sport trends recruitment</a></div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-12 card-body two-user">
                                                             <div class="card-user chevron">
-                                                                <img src="lbd/img/default-avatar.png"  alt="" class="img-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User Name" />
+                                                                <img src="lbd/img/default-avatar.png"  alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="" data-original-title="User Name" />
                                                                 
                                                             </div>
                                                             <div class="card-user">
-                                                                <img src="lbd/img/default-avatar.png" alt="" class="img-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User Name">
+                                                                <img src="lbd/img/default-avatar.png" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="" data-original-title="User Name">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1281,10 +1094,10 @@
                                                 <div class="card card-wrap card-box selected">
                                                     <div class="row">
                                                         <div class="col-md-12 card-header">
-                                                            <div class="col-md-2 card-icon">
+                                                            <div class="col-md-3 card-label">
                                                                 <span class="label ongoing">validated</span>
                                                             </div>
-                                                            <div class="col-md-6 header"></div>
+                                                            
                                                             <div class="col-md-3 check-card pull-right">
                                                                 <label class="checkbox">
                                                                     <input type="checkbox" data-toggle="checkbox" checked value="">
@@ -1293,16 +1106,16 @@
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-md-12 card-title text-center">Webedia blog e-sport trends recruitment</div>
+                                                        <div class="col-md-12 card-title text-center"><a href="javascript:void(0)">Webedia blog e-sport trends recruitment</a></div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-12 card-body two-user">
                                                             <div class="card-user chevron">
-                                                                <img src="lbd/img/default-avatar.png"  alt="" class="img-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User Name" />
+                                                                <img src="lbd/img/default-avatar.png"  alt="" class="img-circle" data-container="body" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User Name" />
                                                                 
                                                             </div>
                                                             <div class="card-user">
-                                                                <img src="lbd/img/default-avatar.png" alt="" class="img-circle" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User Name">
+                                                                <img src="lbd/img/default-avatar.png" alt="" class="img-circle" data-container="body" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User Name">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1313,6 +1126,66 @@
                                                             </div>
                                                             <div class="col-md-6 card-details">
                                                                 <button type="" class="btn bg-default btn-download">Download</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card card-wrap card-box">
+                                                    <div class="row">
+                                                        <div class="col-md-12 card-header">
+                                                            <div class="col-md-3 card-label">
+                                                                <span class="label default">writing</span>
+                                                            </div>
+                                                            
+                                                            <div class="col-md-3 check-card pull-right">
+                                                                <label class="checkbox">
+                                                                    <input type="checkbox" data-toggle="checkbox" value="">
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12 card-title text-center"><a href="javascript:void(0)">Webedia blog e-sport trends recruitment</a></div>
+                                                    </div>
+
+                                                    
+                                                    <div class="row">
+                                                        <div class="multiple-jobs-carousel col-md-12">
+                                                          <div class="carousel-cell">
+                                                              <div class="card-user chevron">
+                                                                <img src="lbd/img/default-avatar.png"  alt="" class="img-circle" data-container="body" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User Name" />
+                                                            </div>
+                                                          </div>
+                                                          <div class="carousel-cell">
+                                                              <div class="card-user chevron">
+                                                                <img src="lbd/img/default-avatar.png"  alt="" class="img-circle" data-container="body" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User Name" />
+                                                            </div>
+                                                          </div>
+                                                          <div class="carousel-cell">
+                                                              <div class="card-user chevron">
+                                                                <img src="lbd/img/default-avatar.png"  alt="" class="img-circle" data-container="body" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User Name" />
+                                                            </div>
+                                                          </div>
+                                                          <div class="carousel-cell">
+                                                              <div class="card-user chevron">
+                                                                <img src="lbd/img/default-avatar.png"  alt="" class="img-circle" data-container="body" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User Name" />
+                                                            </div>
+                                                          </div>
+                                                          <div class="carousel-cell">
+                                                              <div class="card-user">
+                                                                  <img src="lbd/img/default-avatar.png" alt="" class="img-circle" data-container="body" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="User Name">
+                                                              </div>
+                                                          </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="row">
+                                                        <div class="col-md-12 card-footer">
+                                                            <div class="col-md-6 card-details">
+                                                                <span>Volume</span> 40 Articles
+                                                            </div>
+                                                            <div class="col-md-6 card-details">
+                                                                <span>Time left</span> 12:59:31
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1437,9 +1310,13 @@
 
     <!-- TinyMCE-->
     <script type="text/javascript" src="lbd/lib/tinymce_4.2.5/js/tinymce/tinymce.min.js"></script>
+    <!-- Flickity-->
+    <script type="text/javascript" src="lbd/lib/flickity/js/flickity.pkgd.min.js"></script>
+    <!-- Multi Item Carousel -->
+    <script type="text/javascript" src="lbd/lib/multi-item-carousel/multiple-jobs-carousel.js"></script>    
 
     <!-- Custom JS -->
-    <script src="lbd/js/custom.js"></script> 
+    <!-- <script src="lbd/js/custom.js"></script>  -->
 
     <script type="text/javascript">
         var textarea = document.getElementById('newCardTitle');
@@ -1453,6 +1330,40 @@
             el.style.cssText = 'height:' + el.scrollHeight + 'px';
             },0);
         }
+
+        // Instantiate the Bootstrap carousel
+        $('.multi-item-carousel').carousel({
+          interval: false,
+          wrap: false
+        });
+
+        // for every slide in carousel, copy the next slide's item in the slide.
+        // Do the same for the next, next item.
+        $('.multi-item-carousel .item').each(function(){
+          var next = $(this).next();
+          if (!next.length) {
+            next = $(this).siblings(':first');
+          }
+          next.children(':first-child').clone().appendTo($(this));
+          
+          if (next.next().length>0) {
+            next.next().children(':first-child').clone().appendTo($(this));
+          } else {
+            $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+          }
+        });
+
+        // Flickity carousel for multiple jobs
+        $('.multiple-jobs-carousel').flickity({
+          // options
+          cellAlign: 'center',
+          pageDots: false
+          // contain: true
+          // setGallerySize: false,
+          // resize: false
+        });
+
+
     </script>
     
 </html>
