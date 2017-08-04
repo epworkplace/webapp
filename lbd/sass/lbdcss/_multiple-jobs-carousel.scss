@@ -44,11 +44,14 @@
   }
 }
 
+
+// Flickity carousel styles
 .multiple-jobs-carousel {
   // width: 300px; /* fixed gallery width */
+  height: 100%;
   padding: 15px;
   .flickity-viewport {
-
+  width: 85%;
   }
   .flickity-prev-next-button{
     width: 40px;
@@ -66,7 +69,11 @@
 
 .carousel-cell {
 padding: 0;
+display: flex;
+justify-content: center;
 }
+
+
 
 .MultiCarousel { float: left; 
   overflow: hidden; 
