@@ -3163,6 +3163,26 @@ html {
   }
 }
 
+.job-candidates-list{
+  padding-bottom: 200px;
+}
+
+.job-candidate-list-filter{
+  margin-bottom: 20px;
+  .applied-text{
+    .title{
+      color: #353f53;
+      font-weight: 600;
+    }
+    a{
+      color: #448AFF;
+      text-decoration: underline;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+}
 
 /* Job Settings Container Ends*/
 
