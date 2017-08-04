@@ -191,8 +191,7 @@
     background: #d7d9dc;
     color: #ffffff;
   }
-}
-.chevron{
+  &.chevron{
   position: relative;
   &:before{
     content: "\E5CC";
@@ -204,6 +203,8 @@
     color: #d9dbde;
   }
 }
+}
+
 
 .new-card{
   min-height: 180px;
