@@ -256,7 +256,17 @@ $(document).ready(function(){
 		$('.tab-content .edit-content').hide();
 		$('.tab-content .display-content').show();
 	});*/
+
+
+
     // Init DatetimePicker
+    $('.datepicker').datetimepicker({
+    	format: 'DD/MM/YYYY'
+    });
+    $('.timepicker').datetimepicker({
+    	format: 'h:mm A'
+    });
+
 	$('.datepicker-start').datetimepicker({
 		format: 'DD/MM/YYYY',
 		widgetPositioning: {
@@ -272,19 +282,34 @@ $(document).ready(function(){
         }
 	});
 	$('.datepicker-start-up').datetimepicker({
-		format: 'DD/MM/YYYY HH:mm',
+		format: 'DD/MM/YYYY h:mm A',
 		widgetPositioning: {
             horizontal: 'left',
             vertical: 'top'
         }
 	});
 	$('.datepicker-end-up').datetimepicker({
-		format: 'DD/MM/YYYY HH:mm',
+		format: 'DD/MM/YYYY h:mm A',
 		widgetPositioning: {
             horizontal: 'right',
             vertical: 'top'
         }
 	});
+	$('.datepicker-start-down').datetimepicker({
+		format: 'DD/MM/YYYY h:mm A',
+		widgetPositioning: {
+            horizontal: 'left',
+            vertical: 'bottom'
+        }
+	});
+	$('.datepicker-end-down').datetimepicker({
+		format: 'DD/MM/YYYY h:mm A',
+		widgetPositioning: {
+            horizontal: 'right',
+            vertical: 'bottom'
+        }
+	});
+
 
 
 
@@ -645,7 +670,7 @@ $(document).ready(function(){
 
 
 	//Mission Overview Track progressbar
-	var bar = new ProgressBar.Line(trackProgressBar, {
+	/*var bar = new ProgressBar.Line(trackProgressBar, {
 		strokeWidth: 10,
 		easing: 'easeInOut',
 		duration: 1400,
@@ -654,7 +679,7 @@ $(document).ready(function(){
 		trailWidth: 10,
 		svgStyle: {width: '100%', height: '100%'}
 	});
-	bar.animate(0.6); // Number from 0.0 to 1.0
+	bar.animate(0.6);*/ // Number from 0.0 to 1.0
 
 
 

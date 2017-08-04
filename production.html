@@ -178,6 +178,48 @@
                                                                         </div>
                                                                         <div class="col-md-10 assessment-unassigned-title">Not assigned</div>
                                                                     </a>
+                                                                    <div class="cta-container">
+                                                                        <div class="cta">
+                                                                            <ul>
+                                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Order"><i class="material-icons">swap_vert</i></a></li>
+                                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Duplicate"><i class="material-icons">content_copy</i></a></li>
+                                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Remove"><i class="material-icons">delete</i></a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="assessment-box unassigned-step">
+                                                                <div class="assessment-dot">
+                                                                    <i class="material-icons">radio_button_checked</i>
+                                                                </div>
+                                                                <div class="col-md-12 card assessment-card">
+                                                                    <a href="javascript:;">
+                                                                        <div class="col-md-2 assessment-unassigned-user">
+                                                                            <i class="material-icons">person_outline</i>
+                                                                            <span class="notification">0</span>
+                                                                        </div>
+                                                                        <div class="col-md-10 assessment-bidding-title">Bidding ongoing ...<span class="designation">Proofreader</span></div>
+                                                                    </a>
+                                                                    <div class="col-md-4 assessment-label timer pull-right"><i class="fa fa-clock-o" aria-hidden="true"></i> 11:36:59</div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="assessment-box assigned-step">
+                                                                <div class="assessment-dot">
+                                                                    <i class="material-icons">radio_button_checked</i>
+                                                                </div>
+                                                                <div class="col-md-12 card assessment-card">
+                                                                    <a href="javascript:;" id="proofreaderSettings">
+                                                                        <div class="col-md-2 assessment-user-image">
+                                                                            <img src="lbd/img/default-avatar.png" class="img-circle">
+                                                                        </div>
+                                                                        <div class="col-md-10 assessment-title">Michael Martin<span class="designation">Proofreader</span></div>
+                                                                    </a>
+                                                                    <div class="col-md-4 assessment-label timer pull-right"><i class="fa fa-clock-o" aria-hidden="true"></i> 11:36:59</div>
                                                                 </div>
                                                             </div>
                                                         </li>
@@ -202,7 +244,7 @@
                                                                     <i class="material-icons">radio_button_checked</i>
                                                                 </div>
                                                                 <div class="col-md-12 card assessment-card">
-                                                                    <a href="javascript:;">
+                                                                    <a href="javascript:;" id="writerSettings">
                                                                         <div class="col-md-2 assessment-user-image">
                                                                             <img src="lbd/img/default-avatar.png" class="img-circle">
                                                                         </div>
@@ -218,7 +260,7 @@
                                                                     <i class="material-icons">radio_button_checked</i>
                                                                 </div>
                                                                 <div class="col-md-12 card assessment-card active">
-                                                                    <a href="javascript:;">
+                                                                    <a href="javascript:;" id="startingFiles">
                                                                         <div class="col-md-2 assessment-icon">
                                                                             <i class="material-icons">insert_drive_file</i>
                                                                         </div>
@@ -239,7 +281,7 @@
                                     <div class="col-md-12 settings-wrap starting-files-container">
                                         <span class="close"><a href="javascript:;"><i class="material-icons">close</i></a></span>
                                         <div class="header">
-                                            <strong class="primary-font">3 Starting files</strong> <a href="javascript:;">Import files from other cards</a>
+                                            <strong class="primary-font">3 Starting files</strong> <a href="javascript:;" id="importStartingFiles">Import files from other cards</a>
                                         </div>
                                         <div class="row">
                                             <div class="announce-startingfiles-container">
@@ -352,7 +394,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-12 settings-wrap starting-files-import-search-container" style="display: block!important;">
+                                    <div class="col-md-12 settings-wrap starting-files-import-search-container">
                                         <span class="close"><a href="javascript:;"><i class="material-icons">close</i></a></span>
                                         <div class="header">
                                             <a href="javascript:;" class="back"><i class="material-icons">arrow_back</i></a><strong class="primary-font">Import files from other cards</strong>
@@ -371,6 +413,924 @@
                                                 <label>Card Name</label>
                                                 <div class="col-md-12 card selected-card">
                                                     <a href="javascript:;"><i class="material-icons">close</i></a>Webedia blog e-sport trends - SEO
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12 import-files-cards-container">
+                                                <div class="col-md-12 tab-step">
+                                                    <div class="tab-step-content">
+                                                        <ul class="nav">
+                                                            <li class="active"><a href="#tab-starting-import-files-1" data-toggle="tab">Starting files (1)</a></li>
+                                                            <li><a href="#tab-starting-import-files-2" data-toggle="tab">Production files (2)</a></li>
+                                                        </ul>
+                                                        <div class="tab-content tab-content-progress">
+                                                            <div class="tab-pane active" id="tab-starting-import-files-1">
+                                                                <div class="row">
+                                                                    <div class="announce-startingfiles-container">
+                                                                        <div class="row">
+                                                                            <div class="col-md-12 announce-startingfiles">
+                                                                                <div class="col-md-6">
+                                                                                    <div class="starting-files-card">
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-12 starting-file">
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-7 file-name">
+                                                                                                        <span><i class="material-icons">insert_drive_file</i></span>brief_writer.pdf
+                                                                                                    </div>
+                                                                                                    <div class="col-md-5 upload-time">May 10, 2019 - 8.60 Mb</div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-12 file-import-block">
+                                                                                                <button type="" class="btn btn-fill btn-import">Import</button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <div class="starting-files-card">
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-12 starting-file">
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-7 file-name">
+                                                                                                        <span><i class="material-icons">insert_drive_file</i></span>brief_writer.pdf
+                                                                                                    </div>
+                                                                                                    <div class="col-md-5 upload-time">May 10, 2019 - 8.60 Mb</div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-12 file-import-block">
+                                                                                                <button type="" class="btn btn-fill btn-imported">Imported !</button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="tab-pane" id="tab-starting-import-files-2">
+                                                                <div class="row">
+                                                                    <div class="announce-startingfiles-container">
+                                                                        <div class="row">
+                                                                            <div class="col-md-12 announce-startingfiles">
+                                                                                <div class="col-md-6">
+                                                                                    <div class="starting-files-card">
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-12 starting-file">
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-7 file-name">
+                                                                                                        <span><i class="material-icons">insert_drive_file</i></span>brief_writer.pdf
+                                                                                                    </div>
+                                                                                                    <div class="col-md-5 upload-time">May 10, 2019 - 8.60 Mb</div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-12 file-import-block">
+                                                                                                <button type="" class="btn btn-fill btn-import">Import</button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-6">
+                                                                                    <div class="starting-files-card">
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-12 starting-file">
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-7 file-name">
+                                                                                                        <span><i class="material-icons">insert_drive_file</i></span>brief_writer.pdf
+                                                                                                    </div>
+                                                                                                    <div class="col-md-5 upload-time">May 10, 2019 - 8.60 Mb</div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-12 file-import-block">
+                                                                                                <button type="" class="btn btn-fill btn-imported">Imported !</button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 settings-wrap job-setting-writer-container">
+                                        <span class="close"><a href="javascript:;"><i class="material-icons">close</i></a></span>
+                                        <div class="header">
+                                            <strong class="primary-font">Job Settings</strong>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12 job-settings-writer">
+                                                <div class="row">
+                                                    <div class="col-md-12 initial-setup">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <select name="" class="selectpicker">
+                                                                    <option>Writer</option>
+                                                                    <option>Proofreader</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <input type="text" name="" value="200" class="form-control" />
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <select name="" class="selectpicker">
+                                                                    <option>Articles</option>
+                                                                    <option>Blogs</option>
+                                                                    <option>Translations</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12 activation">
+                                                                <div class="col-md-12 activation-container">
+                                                                    <div class="col-md-1 activation-switch">
+                                                                        <div class="switch" data-on-label="" data-off-label="" >
+                                                                            <input type="checkbox" />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-10 activation-statement">
+                                                                        Look for candidates: <span class="no">NO</span><span class="yes">YES</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="col-md-12 progress-steps">
+                                                                    <div id="wizardCard">
+                                                                        <form id="wizardForm" method="" action="">
+                                                                            <div class="tab-links">
+                                                                                <ul class="nav">
+                                                                                    <li><a href="#tab-setting-1" data-toggle="tab">Assignation</a></li>
+                                                                                    <li><a href="#tab-setting-2" data-toggle="tab">Participation rules</a></li>
+                                                                                    <li><a href="#tab-setting-3" data-toggle="tab">Production settings</a></li>
+                                                                                </ul>
+                                                                                <div class="tab-content">
+                                                                                    <div class="tab-pane" id="tab-setting-1">
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-12 assigned-user">
+                                                                                                <label>Assign on this job</label>
+                                                                                                <div class="col-md-12 card assigned-user-card">
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-md-10 user">
+                                                                                                            <div class="user-image">
+                                                                                                                <img class="img-circle" src="lbd/img/default-avatar.png" />
+                                                                                                            </div>
+                                                                                                            <div class="user-name">Lucie Zvanovec</div>
+                                                                                                        </div>
+                                                                                                        <div class="col-md-2 remove">
+                                                                                                            <a href="javascript:;">Remove</a>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-12 tab-navigation">
+                                                                                                <button type="button" class="btn btn-info btn-fill btn-wd btn-no btn-cancel-settings pull-left">Cancel</button>
+                                                                                                <button type="button" class="btn btn-info btn-fill btn-wd btn-yes pull-right btn-next">Next</button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="tab-pane" id="tab-setting-2">
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-12 participation-rules-container">
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-6">
+                                                                                                        <h4 class="title">Cost settings</h4>
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-4">
+                                                                                                                <label>Min. price</label>
+                                                                                                                <input type="text" value="16.00" class="form-control" />
+                                                                                                            </div>
+                                                                                                            <div class="col-md-4">
+                                                                                                                <label>Max. price</label>
+                                                                                                                <input type="text" value="320.00" class="form-control" />
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-4">
+                                                                                                                <label>Min. price</label>
+                                                                                                                <input type="text" value="16.00" class="form-control" />
+                                                                                                            </div>
+                                                                                                            <div class="col-md-4">
+                                                                                                                <label>Max. price</label>
+                                                                                                                <input type="text" value="320.00" class="form-control" />
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-6">
+                                                                                                        <div class="price-place">
+                                                                                                            <div class="col-md-6 recommeded">
+                                                                                                                <span class="head">Recommended Max.</span>16.00 € <a href="javascript:;">apply</a>
+                                                                                                            </div>
+                                                                                                            <div class="col-md-6 recommeded">
+                                                                                                                <span class="head">Estimated margin</span>61.33 % <span class="rise">(<i class="material-icons">arrow_upward</i> +1.33)</span><span class="fall">(<i class="material-icons">arrow_downward</i> -1.33)</span>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <hr />
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-6">
+                                                                                                        <h4 class="title">Bidding Time</h4>
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-12">
+                                                                                                                <label>Starting</label>
+                                                                                                                <div class="row">
+                                                                                                                    <div class="col-md-8">
+                                                                                                                        <input type="text" class="form-control datepicker" placeholder="Date Here"/>
+                                                                                                                    </div>
+                                                                                                                    <div class="col-md-4">
+                                                                                                                        <input type="text" class="form-control timepicker" placeholder="Time Here"/>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-12">
+                                                                                                                <label>Ending</label>
+                                                                                                                <div class="row">
+                                                                                                                    <div class="col-md-8">
+                                                                                                                        <input type="text" class="form-control datepicker" placeholder="Date Here"/>
+                                                                                                                    </div>
+                                                                                                                    <div class="col-md-4">
+                                                                                                                        <input type="text" class="form-control timepicker" placeholder="Time Here"/>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-6">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-8 pull-right">
+                                                                                                                <div class="price-place">
+                                                                                                                    <div class="col-md-12 recommeded">
+                                                                                                                        <span class="head">Bidding</span>04h 00m    
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <hr />
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-6">
+                                                                                                        <h4 class="title">Selection Time</h4>
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-12">
+                                                                                                                <label>Ending</label>
+                                                                                                                <div class="row">
+                                                                                                                    <div class="col-md-8">
+                                                                                                                        <input type="text" class="form-control datepicker" placeholder="Date Here"/>
+                                                                                                                    </div>
+                                                                                                                    <div class="col-md-4">
+                                                                                                                        <input type="text" class="form-control timepicker" placeholder="Time Here"/>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-6">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-8 pull-right">
+                                                                                                                <div class="price-place">
+                                                                                                                    <div class="col-md-12 recommeded">
+                                                                                                                        <span class="head">Selection</span>02h 30m    
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-12 tab-navigation">
+                                                                                                <button type="button" class="btn btn-info btn-fill btn-wd btn-no pull-left btn-back">Back</button>
+                                                                                                <button type="button" class="btn btn-info btn-fill btn-wd btn-yes pull-right btn-next">Next</button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="tab-pane" id="tab-setting-3">
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-12 participation-settings-container">
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-3">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-12">
+                                                                                                                <label>Job duration</label>
+                                                                                                                <div class="input-group">
+                                                                                                                    <input type="text" class="form-control" value="3">
+                                                                                                                    <span class="input-group-addon">
+                                                                                                                        <select name="tempo" class="selectpicker">
+                                                                                                                            <option>hours</option>
+                                                                                                                            <option>days</option>
+                                                                                                                            <option>months</option>
+                                                                                                                            <option>years</option>
+                                                                                                                        </select>
+                                                                                                                    </span>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-6 pull-right">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-6">
+                                                                                                                <label>Starting date</label>
+                                                                                                                <input type="text" class="form-control datepicker-start-down" placeholder="Date Here"/>
+                                                                                                            </div>
+                                                                                                            <div class="col-md-6">
+                                                                                                                <label>Ending date</label>
+                                                                                                                <input type="text" class="form-control datepicker-end-down" placeholder="Date Here"/>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-6">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-12 activation-nobg">
+                                                                                                                <div class="row">
+                                                                                                                    <div class="col-md-12 activation-container">
+                                                                                                                        <div class="col-md-2 activation-switch">
+                                                                                                                            <div class="switch" data-on-label="" data-off-label="" >
+                                                                                                                                <input type="checkbox" />
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                        <div class="col-md-9 activation-statement">
+                                                                                                                            Add additional time (if refused): <span class="no">NO</span><span class="yes">YES</span>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-7">
+                                                                                                                <div class="input-group">
+                                                                                                                    <input type="text" class="form-control" value="3">
+                                                                                                                    <span class="input-group-addon">
+                                                                                                                        <select name="tempo" class="selectpicker">
+                                                                                                                            <option>hours</option>
+                                                                                                                            <option>days</option>
+                                                                                                                            <option>months</option>
+                                                                                                                            <option>years</option>
+                                                                                                                        </select>
+                                                                                                                    </span>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-6">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-12 activation-nobg">
+                                                                                                                <div class="row">
+                                                                                                                    <div class="col-md-12 activation-container">
+                                                                                                                        <div class="col-md-2 activation-switch">
+                                                                                                                            <div class="switch" data-on-label="" data-off-label="" >
+                                                                                                                                <input type="checkbox" />
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                        <div class="col-md-9 activation-statement">
+                                                                                                                            Add plagiarism bot after this job: <span class="no">NO</span><span class="yes">YES</span>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-12 timeline-chart">
+                                                                                                           
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-12 tab-navigation">
+                                                                                                <button type="button" class="btn btn-info btn-fill btn-wd btn-no pull-left btn-back">Back</button>
+                                                                                                <button type="button" class="btn btn-info btn-fill btn-wd btn-yes pull-right btn-finish" onclick="onFinishWizard()">Done</button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>     
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 settings-wrap job-setting-proofreader-container" style="display: block!important;">
+                                        <span class="close"><a href="javascript:;"><i class="material-icons">close</i></a></span>
+                                        <div class="header">
+                                            <strong class="primary-font">Job Settings</strong>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12 job-settings-proofreader">
+                                                <div class="row">
+                                                    <div class="col-md-12 initial-setup">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <select name="" class="selectpicker">
+                                                                    <option>Writer</option>
+                                                                    <option>Proofreader</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <input type="text" name="" value="200" class="form-control" disabled="disabled" />
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <select name="" class="selectpicker" disabled="disabled">
+                                                                    <option>Articles</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12 activation">
+                                                                <div class="col-md-12 activation-container">
+                                                                    <div class="col-md-1 activation-switch">
+                                                                        <div class="switch" data-on-label="" data-off-label="" >
+                                                                            <input type="checkbox" />
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-10 activation-statement">
+                                                                        Look for candidates: <span class="no">NO</span><span class="yes">YES</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div class="col-md-12 progress-steps">
+                                                                    <div id="wizardCard">
+                                                                        <form id="wizardForm" method="" action="">
+                                                                            <div class="tab-links">
+                                                                                <ul class="nav">
+                                                                                    <li><a href="#tab-settings-1" data-toggle="tab">Audience</a></li>
+                                                                                    <li><a href="#tab-settings-2" data-toggle="tab">Participation rules</a></li>
+                                                                                    <li><a href="#tab-settings-3" data-toggle="tab">Production settings</a></li>
+                                                                                    <li class="pull-right"><a href="#tab-settings-4" data-toggle="tab">Candidates list (0)</a></li>
+                                                                                </ul>
+                                                                                <div class="tab-content">
+                                                                                    <div class="tab-pane" id="tab-settings-1">
+                                                                                        <div class="row">
+                                                                                            <div class="audience-container">
+                                                                                                <div class="col-md-6 audience-module">
+                                                                                                    <div class="clearfix">
+                                                                                                        <div class="col-md-12 form-group include-roles">
+                                                                                                            <div class="row">
+                                                                                                                <label>Include</label>
+                                                                                                                <select name="filter" multiple class="selectpicker">
+                                                                                                                    <option data-content="<span class='label senior'>Senior</span>">Senior</option>
+                                                                                                                    <option data-content="<span class='label junior'>Junior</span>">Junior</option>
+                                                                                                                    <option data-content="<span class='label beginner'>Beginner</span>">Beginner</option>
+                                                                                                                </select>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="clearfix">
+                                                                                                        <div class="col-md-12 check-box audience-check">
+                                                                                                            <div class="row">
+                                                                                                                <label class="checkbox include-check">
+                                                                                                                    <input type="checkbox" data-toggle="checkbox" value="">Number of participants
+                                                                                                                </label>
+                                                                                                                <label class="checkbox include-check">
+                                                                                                                    <input type="checkbox" data-toggle="checkbox" value="">Test Passed
+                                                                                                                </label>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="clearfix">
+                                                                                                        <div class="col-md-12 include-drops">
+                                                                                                            <div class="row">
+                                                                                                                <select class="selectpicker" multiple data-live-search="true" data-actions-box="true" data-selected-text-format="count > 3" title="All Clients" id="clients">
+                                                                                                                    <option data-hidden="true"></option>
+                                                                                                                    <option>0</option>
+                                                                                                                    <option>1</option>
+                                                                                                                    <option>2</option>
+                                                                                                                    <option>3</option>
+                                                                                                                    <option>4</option>
+                                                                                                                </select>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="clearfix">
+                                                                                                        <div class="col-md-12 include-drops">
+                                                                                                            <div class="row">
+                                                                                                                <select class="selectpicker" multiple data-live-search="true" data-actions-box="true" data-selected-text-format="count > 3" title="All Categories" id="categories">
+                                                                                                                    <option data-hidden="true"></option>
+                                                                                                                    <option>0</option>
+                                                                                                                    <option>1</option>
+                                                                                                                    <option>2</option>
+                                                                                                                    <option>3</option>
+                                                                                                                    <option>4</option>
+                                                                                                                </select>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="clearfix">
+                                                                                                        <div class="col-md-12 include-drops">
+                                                                                                            <div class="row">
+                                                                                                                <select class="selectpicker" multiple data-live-search="true" data-actions-box="true" data-selected-text-format="count > 3" title="All Clients" id="clients">
+                                                                                                                    <option data-hidden="true"></option>
+                                                                                                                    <option>0</option>
+                                                                                                                    <option>1</option>
+                                                                                                                    <option>2</option>
+                                                                                                                    <option>3</option>
+                                                                                                                    <option>4</option>
+                                                                                                                </select>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="clearfix">
+                                                                                                        <div class="col-md-12 check-box">
+                                                                                                            <div class="row">
+                                                                                                                <label class="checkbox include-check">
+                                                                                                                    <input type="checkbox" data-toggle="checkbox" value="">Language Group
+                                                                                                                </label>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="col-md-6 audience-module">
+                                                                                                    <div class="clearfix">
+                                                                                                        <div class="col-md-12 exclude-container">
+                                                                                                            <label>Exclude</label>
+                                                                                                            <div class="card exclude-card">
+                                                                                                                <div class="col-md-2 exclude-card-cta">
+                                                                                                                    <ul>
+                                                                                                                        <li>
+                                                                                                                            <span data-toggle="modal" data-target="#addExclusion">
+                                                                                                                                <a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" data-container="body" title="Edit"><i class="material-icons">mode_edit</i></a>
+                                                                                                                            <span>
+                                                                                                                        </li>
+                                                                                                                        <li>
+                                                                                                                            <span data-toggle="modal" data-target="#deleteConfirmation">
+                                                                                                                                <a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" data-container="body" title="Remove"><i class="material-icons">close</i></a>
+                                                                                                                            <span>
+                                                                                                                        </li>
+                                                                                                                    </ul>
+                                                                                                                </div>
+                                                                                                                <div class="col-md-10 exclude-card-content">Client <span><i class="material-icons">chevron_right</i></span> Contract <span><i class="material-icons">chevron_right</i></span> Mission</div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="clearfix">
+                                                                                                        <a href="javascript:;" data-toggle="modal" data-target="#addExclusion" class="add-exclusion">+ Add Exclusion</a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <hr />
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-12 audience-container targeted">
+                                                                                                <h4 class="title">25 users will be targeted :</h4>
+                                                                                                <select class="selectpicker" multiple data-live-search="true" data-actions-box="true" data-selected-text-format="count > 3" title="To be targeted.." id="targeted">
+                                                                                                    <option data-hidden="true"></option>
+                                                                                                    <option>Ram</option>
+                                                                                                    <option>Lakshman</option>
+                                                                                                    <option>Bharat</option>
+                                                                                                    <option>Shatrughan</option>
+                                                                                                    <option>Maruti</option>
+                                                                                                    <option>Sugreeve</option>
+                                                                                                    <option>Ravan</option>
+                                                                                                    <option>Meghnad</option>
+                                                                                                    <option>Angad</option>
+                                                                                                    <option>Bali</option>
+                                                                                                    <option>Kunbhakaran</option>
+                                                                                                    <option>Vibhishan</option>
+                                                                                                    <option>Jamavan</option>
+                                                                                                    <option>Jatayu</option>
+                                                                                                    <option>Kumbh</option>
+                                                                                                    <option>Nikumbh</option>
+                                                                                                    <option>Dasharath</option>
+                                                                                                </select>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-12 tab-navigation">
+                                                                                                <button type="button" class="btn btn-info btn-fill btn-wd btn-no btn-cancel-settings pull-left">Cancel</button>
+                                                                                                <button type="button" class="btn btn-info btn-fill btn-wd btn-yes pull-right btn-next">Next</button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="tab-pane" id="tab-settings-2">
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-12 participation-rules-container">
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-6">
+                                                                                                        <h4 class="title">Cost settings</h4>
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-4">
+                                                                                                                <label>Min. price</label>
+                                                                                                                <input type="text" value="16.00" class="form-control" />
+                                                                                                            </div>
+                                                                                                            <div class="col-md-4">
+                                                                                                                <label>Max. price</label>
+                                                                                                                <input type="text" value="320.00" class="form-control" />
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-4">
+                                                                                                                <label>Min. price</label>
+                                                                                                                <input type="text" value="16.00" class="form-control" />
+                                                                                                            </div>
+                                                                                                            <div class="col-md-4">
+                                                                                                                <label>Max. price</label>
+                                                                                                                <input type="text" value="320.00" class="form-control" />
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-6">
+                                                                                                        <div class="price-place">
+                                                                                                            <div class="col-md-6 recommeded">
+                                                                                                                <span class="head">Recommended Max.</span>16.00 € <a href="javascript:;">apply</a>
+                                                                                                            </div>
+                                                                                                            <div class="col-md-6 recommeded">
+                                                                                                                <span class="head">Estimated margin</span>61.33 % <span class="rise">(<i class="material-icons">arrow_upward</i> +1.33)</span><span class="fall">(<i class="material-icons">arrow_downward</i> -1.33)</span>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <hr />
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-6">
+                                                                                                        <h4 class="title">Bidding Time</h4>
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-12">
+                                                                                                                <label>Starting</label>
+                                                                                                                <div class="row">
+                                                                                                                    <div class="col-md-8">
+                                                                                                                        <input type="text" class="form-control datepicker" placeholder="Date Here"/>
+                                                                                                                    </div>
+                                                                                                                    <div class="col-md-4">
+                                                                                                                        <input type="text" class="form-control timepicker" placeholder="Time Here"/>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-12">
+                                                                                                                <label>Ending</label>
+                                                                                                                <div class="row">
+                                                                                                                    <div class="col-md-8">
+                                                                                                                        <input type="text" class="form-control datepicker" placeholder="Date Here"/>
+                                                                                                                    </div>
+                                                                                                                    <div class="col-md-4">
+                                                                                                                        <input type="text" class="form-control timepicker" placeholder="Time Here"/>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-6">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-8 pull-right">
+                                                                                                                <div class="price-place">
+                                                                                                                    <div class="col-md-12 recommeded">
+                                                                                                                        <span class="head">Bidding</span>04h 00m    
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <hr />
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-6">
+                                                                                                        <h4 class="title">Selection Time</h4>
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-12">
+                                                                                                                <label>Ending</label>
+                                                                                                                <div class="row">
+                                                                                                                    <div class="col-md-8">
+                                                                                                                        <input type="text" class="form-control datepicker" placeholder="Date Here"/>
+                                                                                                                    </div>
+                                                                                                                    <div class="col-md-4">
+                                                                                                                        <input type="text" class="form-control timepicker" placeholder="Time Here"/>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-6">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-8 pull-right">
+                                                                                                                <div class="price-place">
+                                                                                                                    <div class="col-md-12 recommeded">
+                                                                                                                        <span class="head">Selection</span>02h 30m    
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-12 tab-navigation">
+                                                                                                <button type="button" class="btn btn-info btn-fill btn-wd btn-no pull-left btn-back">Back</button>
+                                                                                                <button type="button" class="btn btn-info btn-fill btn-wd btn-yes pull-right btn-next">Next</button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="tab-pane" id="tab-settings-3">
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-12 participation-settings-container">
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-3">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-12">
+                                                                                                                <label>Job duration</label>
+                                                                                                                <div class="input-group">
+                                                                                                                    <input type="text" class="form-control" value="3">
+                                                                                                                    <span class="input-group-addon">
+                                                                                                                        <select name="tempo" class="selectpicker">
+                                                                                                                            <option>hours</option>
+                                                                                                                            <option>days</option>
+                                                                                                                            <option>months</option>
+                                                                                                                            <option>years</option>
+                                                                                                                        </select>
+                                                                                                                    </span>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-6 pull-right">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-6">
+                                                                                                                <label>Starting date</label>
+                                                                                                                <input type="text" class="form-control datepicker-start-down" placeholder="Date Here"/>
+                                                                                                            </div>
+                                                                                                            <div class="col-md-6">
+                                                                                                                <label>Ending date</label>
+                                                                                                                <input type="text" class="form-control datepicker-end-down" placeholder="Date Here"/>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-6">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-12 activation-nobg">
+                                                                                                                <div class="row">
+                                                                                                                    <div class="col-md-12 activation-container">
+                                                                                                                        <div class="col-md-2 activation-switch">
+                                                                                                                            <div class="switch" data-on-label="" data-off-label="" >
+                                                                                                                                <input type="checkbox" />
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                        <div class="col-md-9 activation-statement">
+                                                                                                                            Add additional time (if refused): <span class="no">NO</span><span class="yes">YES</span>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-7">
+                                                                                                                <div class="input-group">
+                                                                                                                    <input type="text" class="form-control" value="3">
+                                                                                                                    <span class="input-group-addon">
+                                                                                                                        <select name="tempo" class="selectpicker">
+                                                                                                                            <option>hours</option>
+                                                                                                                            <option>days</option>
+                                                                                                                            <option>months</option>
+                                                                                                                            <option>years</option>
+                                                                                                                        </select>
+                                                                                                                    </span>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <div class="col-md-6">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-12 activation-nobg">
+                                                                                                                <div class="row">
+                                                                                                                    <div class="col-md-12 activation-container">
+                                                                                                                        <div class="col-md-2 activation-switch">
+                                                                                                                            <div class="switch" data-on-label="" data-off-label="" >
+                                                                                                                                <input type="checkbox" />
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                        <div class="col-md-9 activation-statement">
+                                                                                                                            Add plagiarism bot after this job: <span class="no">NO</span><span class="yes">YES</span>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-12 timeline-chart">
+                                                                                                           
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row">
+                                                                                            <div class="col-md-12 tab-navigation">
+                                                                                                <button type="button" class="btn btn-info btn-fill btn-wd btn-no pull-left btn-back">Back</button>
+                                                                                                <button type="button" class="btn btn-info btn-fill btn-wd btn-yes pull-right btn-next">Next</button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="tab-pane" id="tab-settings-4">
+                                                                                        <div class="row">   
+                                                                                            <div class="col-md-12">
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-12">
+                                                                                                        <div class="col-md-12 source-turnover-jobs-wrap">
+                                                                                                            <div class="col-md-10 source-turnover-container">
+                                                                                                                <div class="col-md-5 source-turnover">
+                                                                                                                    <div class="row">
+                                                                                                                        <div class="col-md-12 title">Theoretical</div>
+                                                                                                                    </div>
+                                                                                                                    <div class="row">
+                                                                                                                        <div class="col-md-5 values">
+                                                                                                                            100.00 &#8364;<span>71.66 %</span>
+                                                                                                                        </div>
+                                                                                                                        <div class="col-md-2 bar">
+                                                                                                                            <i class="material-icons">remove</i>
+                                                                                                                        </div>
+                                                                                                                        <div class="col-md-5 values">
+                                                                                                                            150.00 &#8364;<span>60.00 %</span>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                                <div class="col-md-5 source-turnover">
+                                                                                                                    <div class="row">
+                                                                                                                        <div class="col-md-12 title">Live Bidding</div>
+                                                                                                                    </div>
+                                                                                                                    <div class="row">
+                                                                                                                        <div class="col-md-5 values">
+                                                                                                                            100.00 &#8364;<span>71.66 %</span>
+                                                                                                                        </div>
+                                                                                                                        <div class="col-md-2 bar">
+                                                                                                                            <i class="material-icons">remove</i>
+                                                                                                                        </div>
+                                                                                                                        <div class="col-md-5 values">
+                                                                                                                            150.00 &#8364;<span>60.00 %</span>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                    <div class="row">
+                                                                                                                        <div class="col-md-6">
+                                                                                                                            <div class="card card-rise-fall rise">
+                                                                                                                                +9.39 % <i class="material-icons">play_arrow</i>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                        <div class="col-md-6">
+                                                                                                                            <div class="card card-rise-fall fall">
+                                                                                                                                -1.66 % <i class="material-icons">play_arrow</i>
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="col-md-12 define-mission-container">
+                                                                                                    <div class="define-mission">
+                                                                                                        <div class="define-title">No candidates applied yet</div>
+                                                                                                        <div class="define-tagline">
+                                                                                                            Share your announce and new candidates will appear here
+                                                                                                        </div>
+                                                                                                        <a class="btn btn-fill btn-share-announce" href="javascript:;" data-toggle="modal" data-target="#shareAnnounceModal">Share announce</a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>     
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -420,49 +1380,79 @@
         </div>
     </div>
 </div>
-
 <!-- Modal -->
-    <div class="modal fade turnover-evolution" id="turnover-evolution" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade exclusion-modal" id="addExclusion" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-body">
-                    <h4 class="graph-title">Turnover Evolution</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <div class="turnover-graph">
-                        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-                        <div id="chart_div" style="width: 900px; height: 500px;"></div></div>
-                    <div class="turnover-footer">
-                        <button type="button" class="btn btn-default btn-quote">See related quote</button>
-                        <button type="button" class="btn btn-default btn-cancel pull-right" data-dismiss="modal">Close</button>
+                    <div class="row">
+                        <div class="col-md-6 exclude-settings-title">
+                            Exclude
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade edit-overview-modal" id="edit-overview-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="edit-content clearfix">
-                        <div class="edit-duration">
-                            <span class="close"><a href="javascript:;" data-dismiss="modal"><i class="material-icons">close</i></a></span>
-                            <div class="col-md-6">
-                                <label>Start Date</label>
-                                <input type="text" class="form-control datepicker-start" placeholder="Date Picker Here">
-                            </div>
-                            <div class="col-md-6">
-                                <label>End Date</label>
-                                <input type="text" class="form-control datepicker-end" placeholder="Date Picker Here">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-12 form-group exclude-clients">
+                                    <label>Clients</label>
+                                    <select class="selectpicker" multiple data-live-search="true" data-actions-box="true" data-selected-text-format="count > 3" title="Clients" id="excludeClients">
+                                        <option data-hidden="true"></option>
+                                        <option>0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12 form-group exclude-contract">
+                                    <label>Contracts</label>
+                                    <select class="selectpicker" multiple data-live-search="true" data-actions-box="true" data-selected-text-format="count > 3" title="Contracts" id="excludeContracts">
+                                        <option data-hidden="true"></option>
+                                        <option>0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12 form-group exclude-mission">
+                                    <label>Mission</label>
+                                    <select class="selectpicker" multiple data-live-search="true" data-actions-box="true" data-selected-text-format="count > 3" title="Mission" id="excludeMission">
+                                        <option data-hidden="true"></option>
+                                        <option>0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12 form-group form-horizontal exclude-actions">
+                                     <label class="checkbox checkbox-inline">
+                                        <input type="checkbox" data-toggle="checkbox" value="hire">Hire
+                                    </label>
+                                    <label class="checkbox checkbox-inline">
+                                        <input type="checkbox" data-toggle="checkbox" value="fire">Fire
+                                    </label>
+                                </div>
+                                <div class="col-md-12 form-group targeted-participants">
+                                    <label>Targeted participants</label>
+                                    <select class="selectpicker" multiple data-live-search="true" data-actions-box="true" data-selected-text-format="count > 3" title="Targeted Participants" id="participants">
+                                        <option data-hidden="true"></option>
+                                        <option>0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-12  edit-overview">
-                            <textarea id="edit-textarea" class="form-control" rows="10">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                            </textarea>
-                        </div>
-                        <div class="edit-content-action col-md-12">
-                            <button type="button" class="btn btn-default btn-fill btn-wd btn-no pull-left" data-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btn-default btn-fill btn-wd btn-yes pull-right">Save Changes</button>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 question-action">
+                            <button type="button" class="btn btn-default btn-fill btn-wd btn-no pull-left" data-dismiss="modal">Discard Changes</button>
+                            <button type="button" class="btn btn-default btn-fill btn-wd btn-yes pull-right">Exclude</button>
                         </div>
                     </div>
                 </div>
@@ -544,68 +1534,105 @@
     <script src="lbd/js/custom.js"></script> 
 
     <script type="text/javascript">
-  (function(window) {
-    function triggerCallback(e, callback) {
-      if(!callback || typeof callback !== 'function') {
-        return;
-      }
-      var files;
-      if(e.dataTransfer) {
-        files = e.dataTransfer.files;
-      } else if(e.target) {
-        files = e.target.files;
-      }
-      callback.call(null, files);
-    }
-    function makeDroppable(ele, callback) {
-      var input = document.createElement('input');
-      input.setAttribute('type', 'file');
-      input.setAttribute('multiple', true);
-      input.style.display = 'none';
-      input.addEventListener('change', function(e) {
-        triggerCallback(e, callback);
-      });
-      ele.appendChild(input);
-      
-      ele.addEventListener('dragover', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        ele.classList.add('dragover');
-      });
+    $(document).ready(function() {
+        $('#writerSettings').click(function(e) {
+            e.preventDefault();
+            $(this).parent('.assessment-card').addClass('active');
+            $(this).closest('.assessment-dot').addClass('active');
+            $('.job-setting-writer-container').fadeIn(function(){
+                $('.job-setting-writer-container').css({
+                    display: 'block'
+                });
+            });
+            $('.starting-files-container, .starting-files-import-search-container, .job-setting-proofreader-container').fadeOut(function(){
+                $('.starting-files-container, .starting-files-import-search-container, .job-setting-proofreader-container').css({
+                    display: 'none;'
+                });
+            });
+            $('.wp-app').css({
+                overflow: 'hidden'
+            });
+        });
 
-      ele.addEventListener('dragleave', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        ele.classList.remove('dragover');
-      });
+        $('#proofreaderSettings').click(function(e) {
+           e.preventDefault();
+           $(this).parent('.assessment-card').addClass('active');
+           $(this).closest('.assessment-dot').addClass('active');
+           $('.job-setting-proofreader-container').fadeIn(function(){
+                $('.job-setting-proofreader-container').css({
+                    display: 'block'
+                });
+            });
+            $('.starting-files-container, .starting-files-import-search-container, .job-setting-writer-container').fadeOut(function(){
+                $('.starting-files-container, .starting-files-import-search-container, .job-setting-writer-container').css({
+                    display: 'none;'
+                });
+            });
+            $('.wp-app').css({
+                overflow: 'hidden'
+            });
+        });
 
-      ele.addEventListener('drop', function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        ele.classList.remove('dragover');
-        triggerCallback(e, callback);
-      });
-      
-      /*ele.addEventListener('click', function() {
-        input.value = null;
-        input.click();
-      });*/
-    }
-    window.makeDroppable = makeDroppable;
-  })(this);
-  (function(window) {
-    makeDroppable(window.document.querySelector('.dragndrop'), function(files) {
-      console.log(files);
-      var output = document.querySelector('.output');
-      output.innerHTML = '';
-      for(var i=0; i<files.length; i++) {
-        /*if(files[i].type.indexOf('image/') === 0) {
-          output.innerHTML += '<img width="200" src="' + URL.createObjectURL(files[i]) + '" />';
-        }*/
-        output.innerHTML += '<strong class="primary-font output"><i class="material-icons">insert_drive_file</i>'+files[i].name+'</strong>';
-      }
+        $('#startingFiles').click(function(e) {
+            e.preventDefault();
+            $(this).parent('.assessment-card').addClass('active');
+            $(this).closest('.assessment-dot').addClass('active');
+            $('.starting-files-container').fadeIn(function(){
+                $('.starting-files-container').css({
+                    display: 'block'
+                });
+            });
+            $('.job-setting-writer-container, .job-setting-proofreader-container').fadeOut(function(){
+                $('.job-setting-writer-container, .job-setting-proofreader-container').css({
+                    display: 'none;'
+                });
+            });
+            $('.wp-app').css({
+                overflow: 'hidden'
+            });
+        });
+        $('.settings-wrap .close a, .settings-wrap .tab-navigation button.btn-cancel-settings').click(function() {
+            $('.overlay-main-container, .settings-wrap').fadeOut(function(){
+                $('.settings-wrap').css({
+                    display: 'none'
+                });
+                $('.wp-app').css({
+                    overflow: 'auto'
+                });
+            })
+        });
+
+        $('#importStartingFiles').click(function(e) {
+            e.preventDefault();
+            $('.starting-files-container').fadeOut(function(){
+                $('.starting-files-container').css({
+                    display: 'none;'
+                });
+            });
+            $('.starting-files-import-search-container').fadeIn(function(){
+                $('.starting-files-import-search-container').css({
+                    display: 'block'
+                });
+            });
+        });
+
+        $('.starting-files-import-search-container .back').click(function(e) {
+           e.preventDefault();
+           $('.starting-files-container').fadeIn(function(){
+                $(this).css({
+                    display: 'block'
+                });
+            });
+           $('.starting-files-import-search-container').fadeOut(function(){
+                $(this).css({
+                    display: 'none'
+                });
+            });
+        });
+
     });
-  })(this);
-</script>
+        
+    </script>
+
     
 </html>
