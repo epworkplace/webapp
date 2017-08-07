@@ -3081,7 +3081,7 @@ html {
             top: 7px;
             width: 1px;
             height: 20px;
-            background: #eee;
+            background: #E3E3E3;
           }
         }
       }
@@ -3206,6 +3206,21 @@ html {
     }
   }
   .question-list{
+    .quiz-time-section{
+      margin-bottom: 20px;
+      .input-group-addon{
+        position: relative;
+        &:before{
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 7px;
+          width: 1px;
+          height: 20px;
+          background: #E3E3E3;
+        }
+      } 
+    }
     ul{
       padding: 0;
       margin: 0;
