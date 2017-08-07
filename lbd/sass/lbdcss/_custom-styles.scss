@@ -3186,6 +3186,184 @@ html {
 
 /* Job Settings Container Ends*/
 
+/* Job Candidate Lists Starts*/
+
+.job-candidate-list{
+  padding: 0 26px;
+  .candidate-slot{
+    padding: 0 6px;
+    .candidate-list-card{
+      position: relative;
+      padding: 20px;
+      margin-bottom: 12px;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      align-items: center;
+      border: 1px solid transparent;
+      .candidate-info{
+        padding: 0;
+        .candidate-image{
+          width: 40px;
+          padding: 0;
+          img{
+            display: block;
+            max-width: 100%;
+          }
+        }
+        .candidate-description{
+         /*  width: 80%; */
+          padding-right: 0;
+          .candidate-name{
+            color: #353f53;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            a{
+              color: #353f53;
+              font-size: 14px;
+              font-weight: 600;
+            }
+            span.pin{
+              margin-right: 10px;
+              position: relative;
+              &:before{
+                content: "";
+                position: absolute;
+                top: -2px;
+                left: -2px;
+                width: 22px;
+                height: 22px;
+                background: #353f53;
+                -moz-border-radius: 50%;
+                -webkit-border-radius: 50%;
+                border-radius: 50%;
+              }
+              i{
+                color: #fff;
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+              }
+            }
+          }
+          .rate-designation{
+            span.rate{
+              margin-right: 10px;
+              background: #dfe2e5;
+              color: #a8adb5;
+              font-weight: 600;
+              padding: 2px 5px;
+              border-radius: 4px;
+              i{
+                position: relative;
+                top: 2px;
+                color: #fec500;
+                font-size: 18px;
+              }
+            }
+          }
+        }
+        .candidate-time{
+          margin-top: 10px;
+          font-size: 12px;
+        }
+      }
+      .values{
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f3f5f7;
+        height: 78px;
+        .bill{
+          display: block;
+          color: #353f53;
+          font-weight: 600;
+          text-align: center;
+          span{
+            display: block;
+            width: 100%;
+            font-size: 12px;
+            font-weight: 400;
+            color: #a8adb5;
+          }
+        }
+      }
+      &.selected{
+        border: 1px solid #447DF7;
+      }
+      .cta-container{
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s ease;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 40%;
+        height: 100%;
+        background: #fff;
+        .cta{
+          display: flex;
+          -webkit-flex-flow: row wrap;
+          align-items: center;
+          height: 100%;
+          position: absolute;
+          right: 20px;
+          ul{
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            li{
+              display: inline-block;
+              margin-right: 20px;
+              a{
+                cursor: pointer;
+                color: #DFE1E3;
+                i{
+                  font-size: 20px;
+                }
+                i.pin{
+                  -webkit-transform: rotate(45deg);
+                  -moz-transform: rotate(45deg);
+                  -o-transform: rotate(45deg);
+                  -ms-transform: rotate(45deg);
+                  transform: rotate(45deg);
+                }
+                span{
+                  cursor: pointer;
+                }
+                &:hover, &:focus{
+                  color: #485262;
+                }
+              }
+            }
+            li:last-child{
+              margin-right: 0;
+            }
+          }
+        }
+      }
+      &:hover{
+        .cta-container{
+          visibility: visible;
+          opacity: 1;
+          transition: all .3s ease;
+        }
+      }
+    }
+  }
+}
+
+/* Job Candidate Lists Ends*/
+
 
 /*Question list container Starts*/
 
