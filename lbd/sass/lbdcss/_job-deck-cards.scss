@@ -401,13 +401,14 @@
 
 /* Slider for multiple user Starts*/
 
-          .slider {
+.slider {
   width: 60%;
   margin: 0 auto;
 }
 .slick-slide {
   margin: 0px;
   padding: 0 15px;
+  outline: none;
 
 }
 .slick-list{
