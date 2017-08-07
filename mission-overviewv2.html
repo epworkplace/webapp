@@ -1291,14 +1291,14 @@
 
         <script type="text/javascript">
             $(document).on('ready', function() {
-            $(".center").slick({
-            dots: false,
-            infinite: false,
-            draggable: true,
-            slidesToShow: 2,
-            // arrows: false,
-            slidesToScroll: 1
-            });
+                $(".center").slick({
+                dots: false,
+                infinite: false,
+                draggable: true,
+                slidesToShow: 2,
+                // arrows: false,
+                slidesToScroll: 1
+                });
             });
         </script>
         <script type="text/javascript">
@@ -1307,23 +1307,23 @@
             function autosize(){
             var el = this;
             setTimeout(function(){
-            el.style.cssText = 'height:auto; padding:0';
-            // for box-sizing other than "content-box" use:
-            // el.style.cssText = '-moz-box-sizing:content-box';
-            el.style.cssText = 'height:' + el.scrollHeight + 'px';
-            },0);
+                el.style.cssText = 'height:auto; padding:0';
+                // for box-sizing other than "content-box" use:
+                // el.style.cssText = '-moz-box-sizing:content-box';
+                el.style.cssText = 'height:' + el.scrollHeight + 'px';
+                },0);
             }
         </script>
         <script>
             $(document).on('ready', function() {
             slidesCounter();
             function slidesCounter(){
-                            var totalSlides = $('.slick-slide').length;
-                            var currentSlide = $('.slider').slick('slickCurrentSlide');
-                            var slidesLeft = currentSlide === 0 ? '' : '<strong style="font-size:10px; color:#333; line-height:normal;"> +' + currentSlide + '</strong>';
-                            var slidesRight = totalSlides - (currentSlide+2) === 0 ? '' : '<strong style="font-size:10px; color:#333; line-height:normal;"> +' + (totalSlides - (currentSlide+2)) + '</strong>';
-                            $('button.slick-prev').html(slidesLeft);
-                            $('button.slick-next').html(slidesRight);
+                var totalSlides = $('.slick-slide').length;
+                var currentSlide = $('.slider').slick('slickCurrentSlide');
+                var slidesLeft = currentSlide === 0 ? '' : '<strong style="font-size:10px; color:#333; line-height:normal;"> +' + currentSlide + '</strong>';
+                var slidesRight = totalSlides - (currentSlide+2) === 0 ? '' : '<strong style="font-size:10px; color:#333; line-height:normal;"> +' + (totalSlides - (currentSlide+2)) + '</strong>';
+                $('button.slick-prev').html(slidesLeft);
+                $('button.slick-next').html(slidesRight);
             }
 
             $('.slick-prev, .slick-next, .slider').on('click swipe', function(){
