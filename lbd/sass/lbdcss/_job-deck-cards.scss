@@ -6,13 +6,12 @@
     margin-bottom: 10px;
     overflow-x: auto;
     overflow-y: hidden;
-    padding: 80px 0 0 0 ;
+    padding: 0;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    /* height: calc(100vh - 96px); */
-    height: 100vh;
+    height: calc(100vh - 96px);
     li.decks{
       width: 350px;
       margin: 0 -4px 0 0;
@@ -163,14 +162,15 @@
 }
 
 .card-user{
-  width: 52px;
+  width: 82px!important;
   height: 52px;
-  margin-right: 30px;
-  &:nth-last-of-type(1){
+  margin-right: 0;
+  /* &:nth-last-of-type(1){
     margin-right: 0;
-  }
+  } */
+  padding: 0 15px;
   img{
-    max-width: 100%;
+    max-width: 52px;
   }
   .card-user-empty{
     display: flex;
@@ -193,17 +193,17 @@
     color: #ffffff;
   }
   &.chevron{
-  position: relative;
-  &:before{
-    content: "\E5CC";
-    font-family: "Material Icons";
-    position: absolute;
-    top: 18px;
-    right: -21px;
-    font-size: 12px;
-    color: #d9dbde;
+    position: relative;
+    &:before{
+      content: "\E5CC";
+      font-family: "Material Icons";
+      position: absolute;
+      top: 18px;
+      right: -5px;
+      font-size: 12px;
+      color: #d9dbde;
+    }
   }
-}
 }
 
 
@@ -398,4 +398,34 @@
 }
 
 /*Card Design Ends*/
+
+/* Slider for multiple user Starts*/
+
+          .slider {
+  width: 60%;
+  margin: 0 auto;
+}
+.slick-slide {
+  margin: 0px;
+  padding: 0 15px;
+
+}
+.slick-list{
+  /* padding: 0px!important; */
+}
+.slick-slide img {
+  width: 52px;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: #353f53!important;
+}
+.slick-prev {
+  left: -60px!important;
+}
+.slick-next {
+  right: -60px!important;
+}
+
+/* Slider for multiple user Ends*/
 
