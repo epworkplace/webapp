@@ -550,6 +550,9 @@
                                                     </div>
                                                 </nav>
                                             </div>
+                                            <div class="toggle-panel-container" style="">
+                                                <a href="javascript:;"><i class="material-icons">close</i></a>
+                                            </div>
                                         </div>
                                         <div class="col-md-8 main-panel-container">
                                             <div class="col-md-12 settings-wrap mission-overview-reassign">
@@ -1143,6 +1146,9 @@
                                                     </ul>
                                                 </div>
                                             </div>
+                                            <div class="toggle-panel-container" style="display: none;">
+                                                <a href="javascript:;"><i class="material-icons">menu</i></a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1276,7 +1282,26 @@
                 slidesCounter();
             });
 
-        
+            $('.toggle-panel-container').on('click', function(){
+                    var test = $(this).clone();
+                    console.log(test);
+                    $('.tab-panel-container').css({
+                        "width":"0%",
+                        "transition": "all .3s ease",
+                        "display":"none"
+                    });
+                    $('.main-panel-container').find('.toggle-panel-container').css({"display":"flex"});
+                });
+            $('.main-panel-container .toggle-panel-container').on('click', function(){
+                    $(this).hide();
+                    
+                    $('.tab-panel-container').css({
+                        "width":"33.33%",
+                        "transition": "all .3s ease",
+                        "display":"block"
+                    });
+                    // $('.main-panel-container').append(test).find('.toggle-panel-container .material-icons').text("close");
+                });
         });
         </script>
 
