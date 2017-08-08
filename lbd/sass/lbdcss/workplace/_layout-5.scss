@@ -284,9 +284,10 @@
                                   padding: 0;
                                   font-size: 14px;
                                   color: #9a9fa9;
+                                  font-weight: 400;
                                 }
                                 .numbers{
-                                  font-size: 18px;
+                                  font-size: 16px;
                                   font-weight: 600;
                                   color: #353f53;
                                 }
@@ -297,7 +298,7 @@
                                 .right-arrow{
                                   position: absolute;
                                   top: 34%;
-                                  right: 0;
+                                  right: -8px;
                                   i{
                                     color: #d9dbde;
                                     font-size: 16px;
@@ -307,7 +308,7 @@
                             }
                             .assignment-tempo-container{
                               padding: 15px;
-                              height: 72px;
+                              // height: 72px;
                               margin-bottom: 20px;
                               display: -webkit-box;
                               display: -moz-box;
@@ -318,12 +319,12 @@
                               justify-content: space-around;
                               align-items: center;
                               .tempo-desc{
-                                width: 32%;
+                                width: 31%;
                                 color: #448AFF;
-                                font-size: 14px;
+                                font-size: 12px;
                                 font-weight: 600;
                                 margin-right: 12px;
-                                padding: 10px 10px 10px 42px;
+                                padding: 10px 10px 10px 30px;
                                 position: relative;
                                 &:before{
                                   content: "";
@@ -341,6 +342,10 @@
                                 }
                               }
                               .tempo-desc.extended{
+                                i {
+                                  font-size: 16px;
+                                  font-weight: bold;
+                                }
                                 display: block;
                               }
                               .tempo-desc.small{
@@ -463,6 +468,8 @@
                                 }
                                 .announce-image{
                                   padding: 20px 20px 15px 20px;
+                                  display: flex;
+                                  align-items: center;
                                   .image-container{
                                     padding: 0 30px 0 0;
                                     display: -webkit-box;
@@ -536,6 +543,10 @@
                               padding: 0;
                             }
                             .related-files-stack{
+                              .droppable {
+                                padding: 10px;
+                                text-align: center;
+                              }
                               ul{
                                 li{
                                   margin: 0 0 10px 0;

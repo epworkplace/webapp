@@ -3277,6 +3277,7 @@ html {
           }
           .assignment{
             padding-bottom: 300px;
+            background: #000;
             .assignment-bidding-rules{
               height: 100px;
               margin-bottom: 20px;
@@ -3297,7 +3298,7 @@ html {
                   color: #9a9fa9;
                 }
                 .numbers{
-                  font-size: 16px;
+                  font-size: 20px;
                   font-weight: 600;
                   color: #353f53;
                 }
@@ -3308,7 +3309,7 @@ html {
                 .right-arrow{
                   position: absolute;
                   top: 37%;
-                  right: -10px;
+                  right: -8px;
                   i{
                     color: #d9dbde;
                     font-size: 16px;
@@ -3316,6 +3317,7 @@ html {
                 }
               }
             }
+                      
           }
           .stakeholders{
             padding-bottom: 300px;
