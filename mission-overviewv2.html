@@ -222,14 +222,19 @@
                                                                                             <i class="material-icons">chevron_right</i>
                                                                                         </div>
                                                                                     </div>
+                                                                                    
                                                                                     <div class="col-md-3 bidding-elements">
-                                                                                        <div class="header">Proofreader cost</div>
+                                                                                        <div class="header">Proofreader</div>
                                                                                         <div class="numbers">-</div>
                                                                                         <div class="tag">internal</div>
                                                                                         <div class="right-arrow">
                                                                                             <i class="material-icons">chevron_right</i>
                                                                                         </div>
+                                                                                        <div class="right-arrow">
+                                                                                            <i class="material-icons">chevron_right</i>
+                                                                                        </div>
                                                                                     </div>
+                                                                                    
                                                                                     <div class="col-md-3 bidding-elements">
                                                                                         <div class="header">Margin</div>
                                                                                         <div class="numbers">60.00 %</div>
@@ -238,7 +243,42 @@
                                                                                             <i class="material-icons">chevron_right</i>
                                                                                         </div>
                                                                                     </div>
+                                                                                    
                                                                                     <div class="col-md-3 bidding-elements">
+                                                                                        <div class="header">Item cost</div>
+                                                                                        <div class="numbers">25.00 &#8364;</div>
+                                                                                        <div class="tag">0.22 per word</div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-12 card assignment-bidding-rules">
+                                                                                    <div class="col-md-2 bidding-elements">
+                                                                                        <div class="header">Writer cost</div>
+                                                                                        <div class="numbers">16.00 &#8364;</div>
+                                                                                        <div class="tag">2 required</div>
+                                                                                        
+                                                                                    </div>
+                                                                                    <div class="right-arrow col-md-1">
+                                                                                        <i class="material-icons">chevron_right</i>
+                                                                                    </div>
+                                                                                    <div class="col-md-2 bidding-elements">
+                                                                                        <div class="header">Proofreader</div>
+                                                                                        <div class="numbers">-</div>
+                                                                                        <div class="tag">internal</div>
+                                                                                        
+                                                                                    </div>
+                                                                                    <div class="right-arrow col-md-1">
+                                                                                        <i class="material-icons">chevron_right</i>
+                                                                                    </div>
+                                                                                    <div class="col-md-2 bidding-elements">
+                                                                                        <div class="header">Margin</div>
+                                                                                        <div class="numbers">60.00 %</div>
+                                                                                        <div class="tag">agreed</div>
+                                                                                        
+                                                                                    </div>
+                                                                                    <div class="right-arrow col-md-1">
+                                                                                        <i class="material-icons">chevron_right</i>
+                                                                                    </div>
+                                                                                    <div class="col-md-2 col-md-pull-1 bidding-elements">
                                                                                         <div class="header">Item cost</div>
                                                                                         <div class="numbers">25.00 &#8364;</div>
                                                                                         <div class="tag">0.22 per word</div>
@@ -1255,6 +1295,8 @@
                 },0);
             }
         </script>
+
+        <!-- Multiple jobs slider -->
         <script>
             $(document).on('ready', function() {
             slidesCounter();
@@ -1271,5 +1313,19 @@
                 slidesCounter();
             });
         });
+        </script>
+
+        <script>
+             //Mission Overview Track progressbar
+             var bar = new ProgressBar.Line(trackProgressBar, {
+              strokeWidth: 10,
+              easing: 'easeInOut',
+              duration: 1400,
+              color: '#448AFF',
+              trailColor: '#dfe2e5',
+              trailWidth: 10,
+              svgStyle: {width: '100%', height: '100%'}
+             });
+             bar.animate(0.35); // Number from 0.0 to 1.0
         </script>
     </html>
