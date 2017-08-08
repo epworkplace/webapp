@@ -447,7 +447,7 @@ $(document).ready(function(){
 			$('.wp-app').css({
 				overflow: 'hidden'
 			});
-			$('.layout-5.wp-app .tab-panel-container').addClass('left');
+			/*$('.layout-5.wp-app .tab-panel-container').addClass('left');*/
 		})
 	});
 	$('.settings-wrap .close a, .settings-wrap .tab-navigation button.btn-cancel-settings').click(function() {
@@ -458,7 +458,7 @@ $(document).ready(function(){
 			$('.wp-app').css({
 				overflow: 'auto'
 			});
-			$('.layout-5.wp-app .tab-panel-container').removeClass('left');
+			/*$('.layout-5.wp-app .tab-panel-container').removeClass('left');*/
 		})
 	});
 
@@ -629,7 +629,7 @@ $(document).ready(function(){
 
 
     //Scrolling for Layout 5
-    $('.layout-5.wp-app .tab-panel-container').mouseover(function() {
+    /*$('.layout-5.wp-app .tab-panel-container').mouseover(function() {
     		if ($(this).hasClass('left')) {
     			$(this).removeClass('left');
     		}
@@ -641,7 +641,7 @@ $(document).ready(function(){
     		else{
     			$('.layout-5.wp-app .tab-panel-container').addClass('left');
     		}
-    });
+    });*/
 
 	$('#card-container').on('scroll', function () {
 		var cur = $(this).scrollLeft();
