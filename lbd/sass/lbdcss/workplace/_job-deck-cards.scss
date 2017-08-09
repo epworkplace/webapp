@@ -41,7 +41,7 @@
 
             .decks-wrap {
                 overflow-y: scroll;
-                height: 100%;
+                height: calc(100% - 180px);
                 padding: 10px;
                 width: 320px;
             }
@@ -178,7 +178,7 @@
     }
 
     .card-body {
-        padding: 30px 15px;
+        padding: 30px 60px;
         display: -webkit-box;
         display: -moz-box;
         display: -ms-flexbox;
@@ -589,7 +589,7 @@
 /* Slider for multiple user Starts*/
 
 .slider {
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -613,11 +613,11 @@
 }
 
 .slick-prev {
-    left: -60px !important;
+    left: -50px !important;
 }
 
 .slick-next {
-    right: -60px !important;
+    right: -50px !important;
 }
 
 /* Slider for multiple user Ends*/
