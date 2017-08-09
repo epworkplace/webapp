@@ -661,10 +661,10 @@ $(document).ready(function(){
 	     this.scrollLeft -= (delta * 40);
 	     e.preventDefault();
 	 });
-	$('.card-wrap').children().mouseenter(function(){
+	$('.cards-wrap').children().mouseenter(function(){
 		$('#card-container').unmousewheel();
 	});
-	$('.card-wrap').children().mouseleave(function(){
+	$('.cards-wrap').children().mouseleave(function(){
 		$('#card-container').mousewheel(function(e, delta) {
 			this.scrollLeft -= (delta * 40);
 			e.preventDefault();
