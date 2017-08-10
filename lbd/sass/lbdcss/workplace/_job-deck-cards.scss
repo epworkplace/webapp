@@ -650,33 +650,40 @@
 .slider {
     width: 100%;
     margin: 0 auto;
-}
+    color: #353f53;
 
-.slick-slide {
-    margin: 0px;
-    padding: 0 15px;
-    outline: none;
-}
+    .slick-prev, .slick-next {
+        font-size: 10px;
+        line-height: normal;
+        font-weight: 600;
+        color: #353f53;
 
-.slick-list {
-    /* padding: 0px!important; */
-}
+        &:hover, &:focus {
+            color: #353f53;
+        }
 
-.slick-slide img {
-    width: 52px;
-}
+        &:before {
+            color: #353f53 !important;
+        }
+    }
 
-.slick-prev:before,
-.slick-next:before {
-    color: #353f53 !important;
-}
+    .slick-prev {
+        left: -50px !important;
+    }
 
-.slick-prev {
-    left: -50px !important;
-}
+    .slick-next {
+        right: -50px !important;
+    }
 
-.slick-next {
-    right: -50px !important;
+    .slick-slide {
+        margin: 0px;
+        padding: 0 15px;
+        outline: none;
+
+        img {
+            width: 52px;
+        }
+    }
 }
 
 /* Slider for multiple user Ends*/
