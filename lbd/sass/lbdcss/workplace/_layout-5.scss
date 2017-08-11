@@ -224,7 +224,7 @@
                             height: 40px;
                             width: 40px;
                             background: #353f53;
-                            left: calc(33.33% + 50px);
+                            left: calc(33.33% + 54px);
                             z-index: 1;
                             border-radius: 0 25px 25px 0;
                             display: flex;
@@ -232,9 +232,16 @@
                             text-align: center;
                             justify-content: flex-end;
                             padding-right: 10px;
+                            transition: all .3s ease;
+                            opacity: 0.5;
+
+                            &.toggled {
+                                left: 80px;
+                            }
 
                             &:hover {
                                 cursor: pointer;
+                                opacity: 1;
                             }
 
                             a {
@@ -249,7 +256,7 @@
                             transition: all .3s ease;
 
                             .tab-panel {
-                                width: 31.6%;
+                                width: 100%;
                                 transition: all .3s ease;
 
                                 .navbar-default {
