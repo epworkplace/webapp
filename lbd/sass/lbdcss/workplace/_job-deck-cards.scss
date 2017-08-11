@@ -507,7 +507,7 @@
         border: none;
         flex-grow: 1;
 
-        &.validate, &.start {
+        &.start {
             background: #d7d9dc;
 
             &:hover {
@@ -515,7 +515,7 @@
             }
         }
 
-        &.duplicate {
+        &.validate, &.duplicate {
             background: #448aff;
 
             &:hover {
