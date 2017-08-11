@@ -28,6 +28,8 @@
     <link href="lbd/lib/chosen/ImageSelect.css" type="text/css" rel="stylesheet" />
     <!-- Tags -->
     <link rel="StyleSheet" href="lbd/lib/jquery-tageditor-master/jquery.tag-editor.css" type="text/css" />
+    <!-- Rating Stars-->
+    <link rel="stylesheet" href="lbd/lib/rateyo/jquery.rateyo.min.css" />
     <!-- Temporary css for Layouts     -->
     
 </head>
@@ -121,6 +123,12 @@
                                     </a>
                                     <ul class="dropdown-menu" role="menu">
                                         <li>
+                                            <a href="javascript:;" data-toggle="modal" data-target="#changeCardDate">
+                                                <i class="material-icons">date_range</i>
+                                                <span>Change dates</span>
+                                            </a>
+                                        </li>
+                                        <li>
                                             <a href="javascript:;">
                                                 <i class="material-icons">pause</i>
                                                 <span>Pause ...</span>
@@ -172,7 +180,7 @@
                                                                     <i class="material-icons">radio_button_checked</i>
                                                                 </div>
                                                                 <div class="col-md-12 card assessment-card">
-                                                                    <a href="javascript:;">
+                                                                    <a href="javascript:;" id="jobNotAssigned">
                                                                         <div class="col-md-2 assessment-unassigned-user">
                                                                             <i class="material-icons">person_outline</i>
                                                                         </div>
@@ -181,7 +189,7 @@
                                                                     <div class="cta-container">
                                                                         <div class="cta">
                                                                             <ul>
-                                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Order"><i class="material-icons">swap_vert</i></a></li>
+                                                                                <li><a id="proofreaderSettings" href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Edit"><i class="material-icons">mode_edit</i></a></li>
                                                                                 <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Duplicate"><i class="material-icons">content_copy</i></a></li>
                                                                                 <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Remove"><i class="material-icons">delete</i></a></li>
                                                                             </ul>
@@ -196,7 +204,7 @@
                                                                     <i class="material-icons">radio_button_checked</i>
                                                                 </div>
                                                                 <div class="col-md-12 card assessment-card">
-                                                                    <a href="javascript:;">
+                                                                    <a href="javascript:;" id="jobCandidateList">
                                                                         <div class="col-md-2 assessment-unassigned-user">
                                                                             <i class="material-icons">person_outline</i>
                                                                             <span class="notification">0</span>
@@ -204,6 +212,15 @@
                                                                         <div class="col-md-10 assessment-bidding-title">Bidding ongoing ...<span class="designation">Proofreader</span></div>
                                                                     </a>
                                                                     <div class="col-md-4 assessment-label timer pull-right"><i class="fa fa-clock-o" aria-hidden="true"></i> 11:36:59</div>
+                                                                    <div class="cta-container">
+                                                                        <div class="cta">
+                                                                            <ul>
+                                                                                <li><a id="proofreaderSettings" href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Edit"><i class="material-icons">mode_edit</i></a></li>
+                                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Duplicate"><i class="material-icons">content_copy</i></a></li>
+                                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Remove"><i class="material-icons">delete</i></a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </li>
@@ -220,6 +237,15 @@
                                                                         <div class="col-md-10 assessment-title">Michael Martin<span class="designation">Proofreader</span></div>
                                                                     </a>
                                                                     <div class="col-md-4 assessment-label timer pull-right"><i class="fa fa-clock-o" aria-hidden="true"></i> 11:36:59</div>
+                                                                    <div class="cta-container">
+                                                                        <div class="cta">
+                                                                            <ul>
+                                                                                <li><a id="jobCandidateList" href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="View Candidate List"><i class="material-icons">view_list</i></a></li>
+                                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Duplicate"><i class="material-icons">content_copy</i></a></li>
+                                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Remove"><i class="material-icons">delete</i></a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </li>
@@ -229,12 +255,15 @@
                                                                     <i class="material-icons">radio_button_checked</i>
                                                                 </div>
                                                                 <div class="col-md-12 card assessment-card">
-                                                                    <a href="javascript:;">
+                                                                    <a href="javascript:;" id="plagiarism">
                                                                         <div class="col-md-2 assessment-icon">
                                                                             <i class="material-icons">adb</i>
                                                                         </div>
                                                                         <div class="col-md-10 assessment-title">Plagiarism</div>
                                                                     </a>
+                                                                    <div class="col-md-4 plagiarism-progress pull-right">
+                                                                        <div id="plagiarismProgressBar"></div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </li>
@@ -656,7 +685,9 @@
                                                                                                                         <input type="text" class="form-control datepicker" placeholder="Date Here"/>
                                                                                                                     </div>
                                                                                                                     <div class="col-md-4">
-                                                                                                                        <input type="text" class="form-control timepicker" placeholder="Time Here"/>
+                                                                                                                        <div class="row">
+                                                                                                                            <input type="text" class="form-control timepicker" placeholder="Time Here"/>
+                                                                                                                        </div>
                                                                                                                     </div>
                                                                                                                 </div>
                                                                                                             </div>
@@ -669,7 +700,9 @@
                                                                                                                         <input type="text" class="form-control datepicker" placeholder="Date Here"/>
                                                                                                                     </div>
                                                                                                                     <div class="col-md-4">
-                                                                                                                        <input type="text" class="form-control timepicker" placeholder="Time Here"/>
+                                                                                                                        <div class="row">
+                                                                                                                            <input type="text" class="form-control timepicker" placeholder="Time Here"/>
+                                                                                                                        </div>
                                                                                                                     </div>
                                                                                                                 </div>
                                                                                                             </div>
@@ -699,7 +732,9 @@
                                                                                                                         <input type="text" class="form-control datepicker" placeholder="Date Here"/>
                                                                                                                     </div>
                                                                                                                     <div class="col-md-4">
-                                                                                                                        <input type="text" class="form-control timepicker" placeholder="Time Here"/>
+                                                                                                                        <div class="row">
+                                                                                                                            <input type="text" class="form-control timepicker" placeholder="Time Here"/>
+                                                                                                                        </div>
                                                                                                                     </div>
                                                                                                                 </div>
                                                                                                             </div>
@@ -737,7 +772,7 @@
                                                                                                                 <div class="input-group">
                                                                                                                     <input type="text" class="form-control" value="3">
                                                                                                                     <span class="input-group-addon">
-                                                                                                                        <select name="tempo" class="selectpicker">
+                                                                                                                        <select name="" class="selectpicker">
                                                                                                                             <option>hours</option>
                                                                                                                             <option>days</option>
                                                                                                                             <option>months</option>
@@ -840,7 +875,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-12 settings-wrap job-setting-proofreader-container" style="display: block!important;">
+                                    <div class="col-md-12 settings-wrap job-setting-proofreader-container">
                                         <span class="close"><a href="javascript:;"><i class="material-icons">close</i></a></span>
                                         <div class="header">
                                             <strong class="primary-font">Job Settings</strong>
@@ -889,7 +924,6 @@
                                                                                     <li><a href="#tab-settings-1" data-toggle="tab">Audience</a></li>
                                                                                     <li><a href="#tab-settings-2" data-toggle="tab">Participation rules</a></li>
                                                                                     <li><a href="#tab-settings-3" data-toggle="tab">Production settings</a></li>
-                                                                                    <li class="pull-right"><a href="#tab-settings-4" data-toggle="tab">Candidates list (0)</a></li>
                                                                                 </ul>
                                                                                 <div class="tab-content">
                                                                                     <div class="tab-pane" id="tab-settings-1">
@@ -1083,8 +1117,10 @@
                                                                                                                     <div class="col-md-8">
                                                                                                                         <input type="text" class="form-control datepicker" placeholder="Date Here"/>
                                                                                                                     </div>
-                                                                                                                    <div class="col-md-4">
-                                                                                                                        <input type="text" class="form-control timepicker" placeholder="Time Here"/>
+                                                                                                                    <div class="col-md-4 ">
+                                                                                                                        <div class="row">
+                                                                                                                            <input type="text" class="form-control timepicker" placeholder="Time Here"/>
+                                                                                                                        </div>
                                                                                                                     </div>
                                                                                                                 </div>
                                                                                                             </div>
@@ -1096,8 +1132,10 @@
                                                                                                                     <div class="col-md-8">
                                                                                                                         <input type="text" class="form-control datepicker" placeholder="Date Here"/>
                                                                                                                     </div>
-                                                                                                                    <div class="col-md-4">
-                                                                                                                        <input type="text" class="form-control timepicker" placeholder="Time Here"/>
+                                                                                                                    <div class="col-md-4 ">
+                                                                                                                        <div class="row">
+                                                                                                                            <input type="text" class="form-control timepicker" placeholder="Time Here"/>
+                                                                                                                        </div>
                                                                                                                     </div>
                                                                                                                 </div>
                                                                                                             </div>
@@ -1126,8 +1164,10 @@
                                                                                                                     <div class="col-md-8">
                                                                                                                         <input type="text" class="form-control datepicker" placeholder="Date Here"/>
                                                                                                                     </div>
-                                                                                                                    <div class="col-md-4">
-                                                                                                                        <input type="text" class="form-control timepicker" placeholder="Time Here"/>
+                                                                                                                    <div class="col-md-4 ">
+                                                                                                                        <div class="row">
+                                                                                                                            <input type="text" class="form-control timepicker" placeholder="Time Here"/>
+                                                                                                                        </div>
                                                                                                                     </div>
                                                                                                                 </div>
                                                                                                             </div>
@@ -1256,205 +1296,6 @@
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
-                                                                                    <div class="tab-pane" id="tab-settings-4">
-                                                                                        <div class="row">   
-                                                                                            <div class="col-md-12 job-candidates-list">
-                                                                                                <div class="row">
-                                                                                                    <div class="col-md-12">
-                                                                                                        <div class="col-md-12 source-turnover-jobs-wrap">
-                                                                                                            <div class="col-md-10 source-turnover-container">
-                                                                                                                <div class="col-md-5 source-turnover">
-                                                                                                                    <div class="row">
-                                                                                                                        <div class="col-md-12 title">Theoretical</div>
-                                                                                                                    </div>
-                                                                                                                    <div class="row">
-                                                                                                                        <div class="col-md-5 values">
-                                                                                                                            100.00 &#8364;<span>71.66 %</span>
-                                                                                                                        </div>
-                                                                                                                        <div class="col-md-2 bar">
-                                                                                                                            <i class="material-icons">remove</i>
-                                                                                                                        </div>
-                                                                                                                        <div class="col-md-5 values">
-                                                                                                                            150.00 &#8364;<span>60.00 %</span>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                                <div class="col-md-5 source-turnover">
-                                                                                                                    <div class="row">
-                                                                                                                        <div class="col-md-12 title">Live Bidding</div>
-                                                                                                                    </div>
-                                                                                                                    <div class="row">
-                                                                                                                        <div class="col-md-5 values">
-                                                                                                                            100.00 &#8364;<span>71.66 %</span>
-                                                                                                                        </div>
-                                                                                                                        <div class="col-md-2 bar">
-                                                                                                                            <i class="material-icons">remove</i>
-                                                                                                                        </div>
-                                                                                                                        <div class="col-md-5 values">
-                                                                                                                            150.00 &#8364;<span>60.00 %</span>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                    <div class="row">
-                                                                                                                        <div class="col-md-6">
-                                                                                                                            <div class="card card-rise-fall rise">
-                                                                                                                                +9.39 % <i class="material-icons">play_arrow</i>
-                                                                                                                            </div>
-                                                                                                                        </div>
-                                                                                                                        <div class="col-md-6">
-                                                                                                                            <div class="card card-rise-fall fall">
-                                                                                                                                -1.66 % <i class="material-icons">play_arrow</i>
-                                                                                                                            </div>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="row">
-                                                                                                    <div class="col-md-12 job-candidate-list-filter">
-                                                                                                        <div class="row">
-                                                                                                            <div class="col-md-4 applied-text">
-                                                                                                                <div class="title">5 candidates applied</div>
-                                                                                                                <a href="javascript:;">Share announce</a>
-                                                                                                            </div>
-                                                                                                            <div class="col-md-4 pull-right">
-                                                                                                                <select name="" class="selectpicker">
-                                                                                                                    <option>Highest bidding first</option>
-                                                                                                                    <option>Lowest bidding first</option>
-                                                                                                                </select>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="row">
-                                                                                                    <div class="col-md-12">
-                                                                                                        <div class="col-md-12 define-mission-container">
-                                                                                                            <div class="define-mission">
-                                                                                                                <div class="define-title">No candidates applied yet</div>
-                                                                                                                <div class="define-tagline">
-                                                                                                                    Share your announce and new candidates will appear here
-                                                                                                                </div>
-                                                                                                                <a class="btn btn-fill btn-share-announce" href="javascript:;" data-toggle="modal" data-target="#shareAnnounceModal">Share announce</a>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                                <div class="row">
-                                                                                                    <div class="col-md-12 job-candidate-list">
-                                                                                                        <div class="row">
-                                                                                                            <div class="col-md-6 candidate-slot">
-                                                                                                                <div class="card candidate-list-card selected clearfix">
-                                                                                                                    <div class="col-md-8 candidate-info">
-                                                                                                                        <div class="clearfix">
-                                                                                                                            <div class="col-md-4 candidate-image">
-                                                                                                                                <img src="lbd/img/default-avatar.png" class="img-circle" />
-                                                                                                                            </div>
-                                                                                                                            <div class="col-md-9 candidate-description">
-                                                                                                                                <div class="candidate-name">
-                                                                                                                                    <span class="pin"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span>
-                                                                                                                                    <a href="javascript:;">Paul Arnaud</a>
-                                                                                                                                </div>
-                                                                                                                                <div class="rate-designation">
-                                                                                                                                    <span class="rate">4.14 <i class="material-icons">star</i></span><span class="label senior">Senior</span>
-                                                                                                                                </div>
-                                                                                                                            </div>        
-                                                                                                                        </div>
-                                                                                                                        <div class="candidate-time">
-                                                                                                                            May 02 - 2:30pm
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                    <div class="col-md-4 values">
-                                                                                                                        <div class="bill">
-                                                                                                                            1000.00 €<span>59.33 %</span>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                    <div class="cta-container">
-                                                                                                                        <div class="cta">
-                                                                                                                            <ul>
-                                                                                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Assign"><i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
-                                                                                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Pin"><i class="pin fa fa-thumb-tack" aria-hidden="true"></i></a></li>
-                                                                                                                            </ul>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                            <div class="col-md-6 candidate-slot">
-                                                                                                                <div class="card candidate-list-card clearfix">
-                                                                                                                    <div class="col-md-8 candidate-info">
-                                                                                                                        <div class="clearfix">
-                                                                                                                            <div class="col-md-4 candidate-image">
-                                                                                                                                <img src="lbd/img/default-avatar.png" class="img-circle" />
-                                                                                                                            </div>
-                                                                                                                            <div class="col-md-9 candidate-description">
-                                                                                                                                <div class="candidate-name">
-                                                                                                                                    <a href="javascript:;">Paul Arnaud</a>
-                                                                                                                                </div>
-                                                                                                                                <div class="rate-designation">
-                                                                                                                                    <span class="rate">4.14 <i class="material-icons">star</i></span><span class="label senior">Senior</span>
-                                                                                                                                </div>
-                                                                                                                            </div>        
-                                                                                                                        </div>
-                                                                                                                        <div class="candidate-time">
-                                                                                                                            May 02 - 2:30pm
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                    <div class="col-md-4 values">
-                                                                                                                        <div class="bill">
-                                                                                                                            1000.00 €<span>59.33 %</span>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                    <div class="cta-container">
-                                                                                                                        <div class="cta">
-                                                                                                                            <ul>
-                                                                                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Assign"><i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
-                                                                                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Pin"><i class="pin fa fa-thumb-tack" aria-hidden="true"></i></a></li>
-                                                                                                                            </ul>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                            <div class="col-md-6 candidate-slot">
-                                                                                                                <div class="card candidate-list-card clearfix">
-                                                                                                                    <div class="col-md-8 candidate-info">
-                                                                                                                        <div class="clearfix">
-                                                                                                                            <div class="col-md-4 candidate-image">
-                                                                                                                                <img src="lbd/img/default-avatar.png" class="img-circle" />
-                                                                                                                            </div>
-                                                                                                                            <div class="col-md-9 candidate-description">
-                                                                                                                                <div class="candidate-name">
-                                                                                                                                    <a href="javascript:;">Paul Arnaud</a>
-                                                                                                                                </div>
-                                                                                                                                <div class="rate-designation">
-                                                                                                                                    <span class="rate">4.14 <i class="material-icons">star</i></span><span class="label senior">Senior</span>
-                                                                                                                                </div>
-                                                                                                                            </div>        
-                                                                                                                        </div>
-                                                                                                                        <div class="candidate-time">
-                                                                                                                            May 02 - 2:30pm
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                    <div class="col-md-4 values">
-                                                                                                                        <div class="bill">
-                                                                                                                            1000.00 €<span>59.33 %</span>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                    <div class="cta-container">
-                                                                                                                        <div class="cta">
-                                                                                                                            <ul>
-                                                                                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Assign"><i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
-                                                                                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Pin"><i class="pin fa fa-thumb-tack" aria-hidden="true"></i></a></li>
-                                                                                                                            </ul>
-                                                                                                                        </div>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
                                                                                 </div>
                                                                             </div>
                                                                         </form>
@@ -1467,9 +1308,370 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="col-md-12 settings-wrap plagiarism-container">
+                                        <span class="close"><a href="javascript:;"><i class="material-icons">close</i></a></span>
+                                        <div class="header">
+                                            <strong class="primary-font">Plagiarism bot</strong>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12 expanding-cards-container">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="card expanding-card">
+                                                            <div class="row">
+                                                                <a href="javascript:;" class="expand-content">
+                                                                    <div class="col-md-12 card-expand">
+                                                                        <div class="col-md-1 hide-show">
+                                                                            <div class="content-hide"></div>
+                                                                            <div class="content-show"></div>
+                                                                        </div>
+                                                                        <div class="col-md-2 user-image">
+                                                                            <img src="lbd/img/default-avatar.png" class="img-circle">
+                                                                        </div>
+                                                                        <div class="col-md-9 file-name">
+                                                                            Webedia_01-100.zip
+                                                                        </div>
+                                                                        <div class="col-md-2 completion-percentage">
+                                                                            <span class="low">12.57%</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-12 results-container">
+                                                                    <div class="col-md-12 result-list">
+                                                                        <div class="result-link">
+                                                                            #1: <a href="javascript:;">https://uk-secure.edit-place.co.uk/client/quotes1</a>
+                                                                        </div>
+                                                                        <div class="result-description">
+                                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-12 result-list">
+                                                                        <div class="result-link">
+                                                                            #2: <a href="javascript:;">https://uk-secure.edit-place.co.uk/client/quotes1</a>
+                                                                        </div>
+                                                                        <div class="result-description">
+                                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card expanding-card">
+                                                            <div class="row">
+                                                                <a href="javascript:;" class="expand-content">
+                                                                    <div class="col-md-12 card-expand">
+                                                                        <div class="col-md-1 hide-show">
+                                                                            <div class="content-hide"></div>
+                                                                            <div class="content-show"></div>
+                                                                        </div>
+                                                                        <div class="col-md-2 user-image">
+                                                                            <img src="lbd/img/default-avatar.png" class="img-circle">
+                                                                        </div>
+                                                                        <div class="col-md-9 file-name">
+                                                                            Webedia_01-100.zip
+                                                                        </div>
+                                                                        <div class="col-md-2 completion-percentage">
+                                                                            <span class="medium">23.57%</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-12 results-container">
+                                                                    <div class="col-md-12 result-list">
+                                                                        <div class="result-link">
+                                                                            #1: <a href="javascript:;">https://uk-secure.edit-place.co.uk/client/quotes1</a>
+                                                                        </div>
+                                                                        <div class="result-description">
+                                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-12 result-list">
+                                                                        <div class="result-link">
+                                                                            #2: <a href="javascript:;">https://uk-secure.edit-place.co.uk/client/quotes1</a>
+                                                                        </div>
+                                                                        <div class="result-description">
+                                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card expanding-card">
+                                                            <div class="row">
+                                                                <a href="javascript:;" class="expand-content">
+                                                                    <div class="col-md-12 card-expand">
+                                                                        <div class="col-md-1 hide-show">
+                                                                            <div class="content-hide"></div>
+                                                                            <div class="content-show"></div>
+                                                                        </div>
+                                                                        <div class="col-md-2 user-image">
+                                                                            <img src="lbd/img/default-avatar.png" class="img-circle">
+                                                                        </div>
+                                                                        <div class="col-md-9 file-name">
+                                                                            Webedia_01-100.zip
+                                                                        </div>
+                                                                        <div class="col-md-2 completion-percentage">
+                                                                            <span class="high">55.57%</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-md-12 results-container">
+                                                                    <div class="col-md-12 result-list">
+                                                                        <div class="result-link">
+                                                                            #1: <a href="javascript:;">https://uk-secure.edit-place.co.uk/client/quotes1</a>
+                                                                        </div>
+                                                                        <div class="result-description">
+                                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-12 result-list">
+                                                                        <div class="result-link">
+                                                                            #2: <a href="javascript:;">https://uk-secure.edit-place.co.uk/client/quotes1</a>
+                                                                        </div>
+                                                                        <div class="result-description">
+                                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="col-md-12 plagiarism-check-container">
+                                                    Plagiarism check ongoing...
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12 tab-navigation">
+                                                <button type="button" data-toggle="modal" data-target="#jobDisapproveModal" class="btn btn-info btn-fill btn-wd btn-disapprove btn-cancel-settings pull-left">Disapprove</button>
+                                                <button type="button" data-toggle="modal" data-target="#jobApproveModal" class="btn btn-info btn-fill btn-wd btn-yes pull-right">Approve</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 settings-wrap job-candidate-list-container">
+                                        <span class="close"><a href="javascript:;"><i class="material-icons">close</i></a></span>
+                                        <div class="header">
+                                            <strong class="primary-font">Candidate List</strong>
+                                        </div>
+                                        <div class="row">   
+                                            <div class="col-md-12 job-candidates-list">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="col-md-12 source-turnover-jobs-wrap">
+                                                            <div class="col-md-10 source-turnover-container">
+                                                                <div class="col-md-5 source-turnover">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12 title">Theoretical</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-5 values">
+                                                                            100.00 &#8364;<span>71.66 %</span>
+                                                                        </div>
+                                                                        <div class="col-md-2 bar">
+                                                                            <i class="material-icons">remove</i>
+                                                                        </div>
+                                                                        <div class="col-md-5 values">
+                                                                            150.00 &#8364;<span>60.00 %</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-5 source-turnover">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12 title">Live Bidding</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-5 values">
+                                                                            100.00 &#8364;<span>71.66 %</span>
+                                                                        </div>
+                                                                        <div class="col-md-2 bar">
+                                                                            <i class="material-icons">remove</i>
+                                                                        </div>
+                                                                        <div class="col-md-5 values">
+                                                                            150.00 &#8364;<span>60.00 %</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-md-6">
+                                                                            <div class="card card-rise-fall rise">
+                                                                                +9.39 % <i class="material-icons">play_arrow</i>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-6">
+                                                                            <div class="card card-rise-fall fall">
+                                                                                -1.66 % <i class="material-icons">play_arrow</i>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12 job-candidate-list-filter">
+                                                        <div class="row">
+                                                            <div class="col-md-4 applied-text">
+                                                                <div class="title">5 candidates applied</div>
+                                                                <a href="javascript:;">Share announce</a>
+                                                            </div>
+                                                            <div class="col-md-4 pull-right">
+                                                                <select name="" class="selectpicker">
+                                                                    <option>Highest bidding first</option>
+                                                                    <option>Lowest bidding first</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="col-md-12 define-mission-container">
+                                                            <div class="define-mission">
+                                                                <div class="define-title">No candidates applied yet</div>
+                                                                <div class="define-tagline">
+                                                                    Share your announce and new candidates will appear here
+                                                                </div>
+                                                                <a class="btn btn-fill btn-share-announce" href="javascript:;" data-toggle="modal" data-target="#shareAnnounceModal">Share announce</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12 job-candidate-list">
+                                                        <div class="row">
+                                                            <div class="col-md-6 candidate-slot">
+                                                                <div class="card candidate-list-card selected clearfix">
+                                                                    <div class="col-md-8 candidate-info">
+                                                                        <div class="clearfix">
+                                                                            <div class="col-md-4 candidate-image">
+                                                                                <img src="lbd/img/default-avatar.png" class="img-circle" />
+                                                                            </div>
+                                                                            <div class="col-md-9 candidate-description">
+                                                                                <div class="candidate-name">
+                                                                                    <span class="pin"><i class="fa fa-thumb-tack" aria-hidden="true"></i></span>
+                                                                                    <a href="javascript:;">Paul Arnaud</a>
+                                                                                </div>
+                                                                                <div class="rate-designation">
+                                                                                    <span class="rate">4.14 <i class="material-icons">star</i></span><span class="label senior">Senior</span>
+                                                                                </div>
+                                                                            </div>        
+                                                                        </div>
+                                                                        <div class="candidate-time">
+                                                                            May 02 - 2:30pm
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4 values">
+                                                                        <div class="bill">
+                                                                            1000.00 €<span>59.33 %</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cta-container">
+                                                                        <div class="cta">
+                                                                            <ul>
+                                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Assign"><i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
+                                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Pin"><i class="pin fa fa-thumb-tack" aria-hidden="true"></i></a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 candidate-slot">
+                                                                <div class="card candidate-list-card unselected clearfix">
+                                                                    <div class="col-md-8 candidate-info">
+                                                                        <div class="clearfix">
+                                                                            <div class="col-md-4 candidate-image">
+                                                                                <img src="lbd/img/default-avatar.png" class="img-circle" />
+                                                                            </div>
+                                                                            <div class="col-md-9 candidate-description">
+                                                                                <div class="candidate-name">
+                                                                                    <a href="javascript:;">Paul Arnaud</a>
+                                                                                </div>
+                                                                                <div class="rate-designation">
+                                                                                    <span class="rate">4.14 <i class="material-icons">star</i></span><span class="label junior">Junior</span>
+                                                                                </div>
+                                                                            </div>        
+                                                                        </div>
+                                                                        <div class="candidate-time">
+                                                                            May 02 - 2:30pm
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4 values">
+                                                                        <div class="bill">
+                                                                            1000.00 €<span>59.33 %</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cta-container">
+                                                                        <div class="cta">
+                                                                            <ul>
+                                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Assign"><i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
+                                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Pin"><i class="pin fa fa-thumb-tack" aria-hidden="true"></i></a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-6 candidate-slot">
+                                                                <div class="card candidate-list-card clearfix">
+                                                                    <div class="col-md-8 candidate-info">
+                                                                        <div class="clearfix">
+                                                                            <div class="col-md-4 candidate-image">
+                                                                                <img src="lbd/img/default-avatar.png" class="img-circle" />
+                                                                            </div>
+                                                                            <div class="col-md-9 candidate-description">
+                                                                                <div class="candidate-name">
+                                                                                    <a href="javascript:;">Paul Arnaud</a>
+                                                                                </div>
+                                                                                <div class="rate-designation">
+                                                                                    <span class="rate">4.14 <i class="material-icons">star</i></span><span class="label beginner">Beginner</span>
+                                                                                </div>
+                                                                            </div>        
+                                                                        </div>
+                                                                        <div class="candidate-time">
+                                                                            May 02 - 2:30pm
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4 values">
+                                                                        <div class="bill">
+                                                                            1000.00 €<span>59.33 %</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="cta-container">
+                                                                        <div class="cta">
+                                                                            <ul>
+                                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Assign"><i class="fa fa-user-plus" aria-hidden="true"></i></a></li>
+                                                                                <li><a href="javascript:void(0);" data-toggle="tooltip" data-placement="bottom" title="Pin"><i class="pin fa fa-thumb-tack" aria-hidden="true"></i></a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="content">
-
+                                    <div class="col-md-12">
+                                        <h2 class="content-title">Last completed job</h2>
+                                        <div class="no-job-container">
+                                            <div class="no-job-info">
+                                                <h4>No Job yet here!</h4>
+                                                <p>Check out of the left and see the advancement of this card.<br />Completed jobs will appear here.</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1582,9 +1784,9 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-12 question-action">
-                            <button type="button" class="btn btn-default btn-fill btn-wd btn-no pull-left" data-dismiss="modal">Discard Changes</button>
-                            <button type="button" class="btn btn-default btn-fill btn-wd btn-yes pull-right">Exclude</button>
+                        <div class="col-md-12 tab-navigation">
+                            <button type="button" data-dismiss="modal" class="btn btn-info btn-fill btn-wd btn-no btn-cancel-settings pull-left">Cancel</button>
+                            <button type="button" class="btn btn-info btn-fill btn-wd btn-yes pull-right btn-next">Next</button>
                         </div>
                     </div>
                 </div>
@@ -1633,6 +1835,195 @@
                                     <a href="javascript:;" class="whatsapp btn btn-fill">WhatsApp</a>
                                 </li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade disapprove-modal" id="jobDisapproveModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <div class="row">
+                        <div class="col-md-12 disapprove-modal-title">
+                            <div class="col-md-2 candidate-image">
+                                <img src="lbd/img/default-avatar.png" class="img-circle" />
+                            </div>
+                            <div class="col-md-10 modal-title">
+                                Disapprove Alice's job <span>Completed yesterday</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 comment-section">
+                            <div class="row">
+                                <div class="col-md-7 reason">
+                                    <label>Main reason</label>
+                                    <select class="selectpicker" id="disapproveReason">
+                                        <option>Insufficient Work</option>
+                                        <option>Insufficient Work</option>
+                                        <option>Insufficient Work</option>
+                                        <option>Insufficient Work</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 comment">
+                                    <label>What is the problem?</label>
+                                    <textarea class="form-control" rows="6"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 fire">
+                                    <label class="checkbox">
+                                        <input type="checkbox" data-toggle="checkbox" value="">Fire Alice from this task
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-12 card rate-task-container">
+                                <div class="star-rate-task">
+                                    <div class="star-rating" id="jobTaskDisapproveRating"></div>
+                                    <div class="star-rating-label">1 - Awful</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-md-12 send-message-container">
+                            <div class="row">
+                                <div class="col-md-12 send-message-display">
+                                    <label>Message sent to corrector</label>
+                                    <div class="message-container">
+                                        <a href="javascript:;" class="btn edit-message">Edit Message</a>
+                                        <p>Dear Participant,</p>
+                                        <p>Your participation to <a href="javascript:;">Webedia 200 articles blog</a> It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                                        <p><a href="javascript:;">Lorem ipsum dolor sit amet</a></p>
+                                        <p><strong>Sed ut perspiciatis unde omnis iste natus error sit</strong> voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                                        <p>Regards<br /><strong>Edit-place Editorial team</strong></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 send-message-edit">
+                                    <label>Edit Message</label>
+                                    <textarea id="editFireMessage"></textarea>
+                                    <a href="javascript:;" class="btn save-edit pull-right">Save Changes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 confirm-action">
+                            <button type="button" class="btn btn-default btn-fill btn-confirm">Confirm</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 notified-members-container">
+                            <div class="notified-member">
+                                <img src="lbd/img/default-avatar.png" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="" data-original-title="User Name">
+                            </div>
+                            <div class="notified-member">
+                                <img src="lbd/img/default-avatar.png" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="" data-original-title="User Name">
+                            </div>
+                            <div class="notified-member">
+                                <img src="lbd/img/default-avatar.png" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="" data-original-title="User Name">
+                            </div>
+                        </div>
+                        <div class="col-md-12 notified-members-count">
+                            <span>3 people</span> will be notified
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade approve-modal" id="jobApproveModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <div class="row">
+                        <div class="col-md-12 approve-modal-title">
+                            <div class="col-md-2 candidate-image">
+                                <img src="lbd/img/default-avatar.png" class="img-circle" />
+                            </div>
+                            <div class="col-md-10 modal-title">
+                                Approve Alice's job <span>Completed yesterday</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 comment-section">
+                            <div class="row">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 comment">
+                                    <label>Comment about this job</label>
+                                    <textarea class="form-control" rows="6"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-md-12 card rate-task-container">
+                                <div class="star-rate-task">
+                                    <div class="star-rating" id="jobTaskApproveRating"></div>
+                                    <div class="star-rating-label">1 - Awful</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 confirm-action">
+                            <button type="button" class="btn btn-default btn-fill btn-confirm">Confirm</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 notified-members-container">
+                            <div class="notified-member">
+                                <img src="lbd/img/default-avatar.png" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="" data-original-title="User Name">
+                            </div>
+                            <div class="notified-member">
+                                <img src="lbd/img/default-avatar.png" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="" data-original-title="User Name">
+                            </div>
+                            <div class="notified-member">
+                                <img src="lbd/img/default-avatar.png" alt="" class="img-circle" data-toggle="tooltip" data-container="body" data-placement="bottom" title="" data-original-title="User Name">
+                            </div>
+                        </div>
+                        <div class="col-md-12 notified-members-count">
+                            <span>3 people</span> will be notified
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade change-card-date-modal" id="changeCardDate" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <div class="row">
+                        <div class="col-md-6 change-card-date-title">
+                            Change card date
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Ending Date</label>
+                            <input type="text" class="form-control datepicker-end" placeholder="Date Here"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 tab-navigation">
+                            <button type="button" data-dismiss="modal" class="btn btn-info btn-fill btn-wd btn-no btn-cancel-settings pull-left">Cancel</button>
+                            <button type="button" class="btn btn-info btn-fill btn-wd btn-yes pull-right btn-next">Confirm</button>
                         </div>
                     </div>
                 </div>
@@ -1701,6 +2092,9 @@
     <!-- Bootstrap Selelect Picker --> 
     <script type="text/javascript" src="lbd/js/bootstrap-select.js"></script>
 
+    <!-- Rating Stars -->
+    <script type="text/javascript" src="lbd/lib/rateyo/jquery.rateyo.js"></script>
+
     <!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
     <script src="lbd/js/demo.js"></script>
 
@@ -1724,8 +2118,8 @@
                     display: 'block'
                 });
             });
-            $('.starting-files-container, .starting-files-import-search-container, .job-setting-proofreader-container').fadeOut(function(){
-                $('.starting-files-container, .starting-files-import-search-container, .job-setting-proofreader-container').css({
+            $('.starting-files-container, .starting-files-import-search-container, .job-setting-proofreader-container, .job-candidate-list-container, .plagiarism-container').fadeOut(function(){
+                $('.starting-files-container, .starting-files-import-search-container, .job-setting-proofreader-container, .job-candidate-list-container, .plagiarism-container').css({
                     display: 'none;'
                 });
             });
@@ -1734,7 +2128,7 @@
             });
         });
 
-        $('#proofreaderSettings').click(function(e) {
+        $('#proofreaderSettings, #jobNotAssigned').click(function(e) {
            e.preventDefault();
            $(this).parent('.assessment-card').addClass('active');
            $(this).closest('.assessment-dot').addClass('active');
@@ -1743,8 +2137,8 @@
                     display: 'block'
                 });
             });
-            $('.starting-files-container, .starting-files-import-search-container, .job-setting-writer-container').fadeOut(function(){
-                $('.starting-files-container, .starting-files-import-search-container, .job-setting-writer-container').css({
+            $('.starting-files-container, .starting-files-import-search-container, .job-setting-writer-container, .job-candidate-list-container, .plagiarism-container').fadeOut(function(){
+                $('.starting-files-container, .starting-files-import-search-container, .job-setting-writer-container, .job-candidate-list-container, .plagiarism-container').css({
                     display: 'none;'
                 });
             });
@@ -1762,8 +2156,8 @@
                     display: 'block'
                 });
             });
-            $('.job-setting-writer-container, .job-setting-proofreader-container').fadeOut(function(){
-                $('.job-setting-writer-container, .job-setting-proofreader-container').css({
+            $('.job-setting-writer-container, .job-setting-proofreader-container, .plagiarism-container').fadeOut(function(){
+                $('.job-setting-writer-container, .job-setting-proofreader-container, .job-candidate-list-container, .plagiarism-container').css({
                     display: 'none;'
                 });
             });
@@ -1771,6 +2165,7 @@
                 overflow: 'hidden'
             });
         });
+
         $('.settings-wrap .close a, .settings-wrap .tab-navigation button.btn-cancel-settings').click(function() {
             $('.overlay-main-container, .settings-wrap').fadeOut(function(){
                 $('.settings-wrap').css({
@@ -1810,9 +2205,122 @@
             });
         });
 
-    });
-        
-    </script>
+        $('#jobCandidateList').click(function(e) {
+            e.preventDefault();
+            $(this).parent('.assessment-card').addClass('active');
+            $(this).closest('.assessment-dot').addClass('active');
+            $('.job-candidate-list-container').fadeIn(function(){
+                $('.job-candidate-list-container').css({
+                    display: 'block'
+                });
+            });
+            $('.starting-files-container, .job-setting-writer-container, .job-setting-proofreader-container, .plagiarism-container').fadeOut(function(){
+                $('.starting-files-container, .job-setting-writer-container, .job-setting-proofreader-container, .plagiarism-container').css({
+                    display: 'none;'
+                });
+            });
+            $('.wp-app').css({
+                overflow: 'hidden'
+            });
+        });
 
-    
+        $('#plagiarism').click(function(e) {
+            e.preventDefault();
+            $(this).parent('.assessment-card').addClass('active');
+            $(this).closest('.assessment-dot').addClass('active');
+            $('.plagiarism-container').fadeIn(function(){
+                $('.plagiarism-container').css({
+                    display: 'block'
+                });
+            });
+            $('.starting-files-container, .job-setting-writer-container, .job-setting-proofreader-container, .job-candidate-list-container').fadeOut(function(){
+                $('.starting-files-container, .job-setting-writer-container, .job-setting-proofreader-container, .job-candidate-list-container').css({
+                    display: 'none;'
+                });
+            });
+            $('.wp-app').css({
+                overflow: 'hidden'
+            });
+        });
+
+        
+
+    });
+
+    //Plagiarism Progress
+    var bar = new ProgressBar.Line(plagiarismProgressBar, {
+        strokeWidth: 15,
+        easing: 'easeInOut',
+        duration: 1400,
+        color: '#d7d9dc',
+        trailColor: '#f3f5f7',
+        trailWidth: 15,
+        svgStyle: {width: '100%', height: '100%'}
+    });
+
+    bar.animate(0.6);  // Number from 0.0 to 1.0
+
+
+
+    //Job star rating
+    $(function () {
+        var $rateYo = $("#jobTaskDisapproveRating").rateYo({
+            rating: 1,
+            spacing: "2px",
+            numStars: 5,
+            normalFill: "#d4d6dc",
+            ratedFill: "#fec500",
+            starWidth: "16px"
+        });
+        $("#jobTaskDisapproveRating").click(function () {
+            var rating = $rateYo.rateYo('rating');
+            if (rating <= 1) {
+                $('.star-rating-label').text(rating + " - Awful");
+            }
+            else if ((rating > 1) && (rating <=2)) {
+                $('.star-rating-label').text(rating + " - OK");
+            }
+            else if ((rating > 2) && (rating <=3)) {
+                $('.star-rating-label').text(rating + " - Good");
+            }
+            else if ((rating > 3) && (rating <=4)) {
+                $('.star-rating-label').text(rating + " - Very Good");
+            }
+            else{
+                $('.star-rating-label').text(rating + " - Exellent");
+            }
+            
+        });
+    });
+     $(function () {
+        var $rateYo = $("#jobTaskApproveRating").rateYo({
+            rating: 1,
+            spacing: "2px",
+            numStars: 5,
+            normalFill: "#d4d6dc",
+            ratedFill: "#fec500",
+            starWidth: "16px"
+        });
+        $("#jobTaskApproveRating").click(function () {
+            var rating = $rateYo.rateYo('rating');
+            if (rating <= 1) {
+                $('.star-rating-label').text(rating + " - Awful");
+            }
+            else if ((rating > 1) && (rating <=2)) {
+                $('.star-rating-label').text(rating + " - OK");
+            }
+            else if ((rating > 2) && (rating <=3)) {
+                $('.star-rating-label').text(rating + " - Good");
+            }
+            else if ((rating > 3) && (rating <=4)) {
+                $('.star-rating-label').text(rating + " - Very Good");
+            }
+            else{
+                $('.star-rating-label').text(rating + " - Exellent");
+            }
+            
+        });
+    });
+
+    </script>
 </html>

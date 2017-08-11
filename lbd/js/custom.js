@@ -717,6 +717,14 @@ $(document).ready(function(){
 		$('.candidate-action-container .review-link').find(".review-show, .review-hide").toggle();
 	});
 
+	//Plagiarism content Candidate Task Test Article
+	$('.results-container').hide();
+	$('.hide-show .content-show').hide();
+	$('a.expand-content').click(function(){
+		$(this).parents('.expanding-card').find('.results-container').slideToggle(400);
+		$(this).find('.hide-show').find(".content-show, .content-hide").toggle();
+	});
+
 
 
 });
