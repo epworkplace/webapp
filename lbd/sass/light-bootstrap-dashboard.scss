@@ -2,6 +2,9 @@
 @import "lbdcss/variables";
 @import "lbdcss/mixins";
 
+// Custom Variables and mixins
+@import "lbdcss/mixins/custom-mixins";
+
 //plugins css
 @import "lbdcss/plugins/animate";
 @import "lbdcss/plugins/sweetalert2";
@@ -27,7 +30,6 @@
 @import "lbdcss/checkbox-radio-switch";
 @import "lbdcss/navbars";
 @import "lbdcss/footers";
-
 
 // Fancy Stuff
 @import "lbdcss/social-buttons";
@@ -55,6 +57,3 @@
 @import "lbdcss/workplace/job-deck-cards";
 @import "lbdcss/workplace/layout-5";
 @import "lbdcss/workplace/media-queries";
-
-
-

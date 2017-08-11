@@ -520,10 +520,14 @@ $(document).ready(function(){
     var lesstext = "See less";
      $('.more').each(function() {
         var content = $(this).html();
+        // console.log(content);
         if(content.length > showChar) {        
             var c = content.substr(1, showChar);
+            // console.log(c);
             var h = content.substr(showChar, content.length - showChar); 
+            // console.log(h);
             var html = c + '<span class="moreellipses">' + ellipsestext+ '</span><span class="morecontent"><span>' + h + '</span><a href="" class="morelink">' + moretext + '</a></span>';
+            // console.log(html);
             $(this).html(html);
         }      
     });  
@@ -643,29 +647,29 @@ $(document).ready(function(){
     		}
     });*/
 
-	$('#card-container').on('scroll', function () {
-		var cur = $(this).scrollLeft();
-		if (cur == 0) {
-			$('.tab-panel-container').removeClass('left');
-		} 
-		else if (cur > 0){
-			$('.tab-panel-container').addClass('left');
-		}
-	});
-	$('#card-container').trigger('scroll');
-    $('#card-container').mousewheel(function(e, delta) {
-	     this.scrollLeft -= (delta * 40);
-	     e.preventDefault();
-	 });
-	$('.card-wrap').children().mouseenter(function(){
-		$('#card-container').unmousewheel();
-	});
-	$('.card-wrap').children().mouseleave(function(){
-		$('#card-container').mousewheel(function(e, delta) {
-			this.scrollLeft -= (delta * 40);
-			e.preventDefault();
-		});
-	});  
+	// $('#card-container').on('scroll', function () {
+	// 	var cur = $(this).scrollLeft();
+	// 	if (cur == 0) {
+	// 		$('.tab-panel-container').removeClass('left');
+	// 	} 
+	// 	else if (cur > 0){
+	// 		$('.tab-panel-container').addClass('left');
+	// 	}
+	// });
+	// $('#card-container').trigger('scroll');
+ //    $('#card-container').mousewheel(function(e, delta) {
+	//      this.scrollLeft -= (delta * 40);
+	//      e.preventDefault();
+	//  });
+	// $('.card-wrap').children().mouseenter(function(){
+	// 	$('#card-container').unmousewheel();
+	// });
+	// $('.card-wrap').children().mouseleave(function(){
+	// 	$('#card-container').mousewheel(function(e, delta) {
+	// 		this.scrollLeft -= (delta * 40);
+	// 		e.preventDefault();
+	// 	});
+	// });  
 
 
 
