@@ -255,9 +255,14 @@
                             width: 33.333%;
                             transition: all .3s ease;
 
+                            &.toggled {
+                                margin-left: -33.33%;
+                            }
+
                             .tab-panel {
                                 width: 100%;
                                 transition: all .3s ease;
+                                position: inherit;
 
                                 .navbar-default {
                                     .page-title {
