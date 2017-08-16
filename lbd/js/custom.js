@@ -282,6 +282,20 @@ $(document).ready(function(){
             vertical: 'bottom'
         }
 	});
+	$('.datepicker-start-date-up').datetimepicker({
+		format: 'DD/MM/YYYY',
+		widgetPositioning: {
+            horizontal: 'auto',
+            vertical: 'top'
+        }
+	});		
+	$('.datepicker-end-date-up').datetimepicker({
+		format: 'DD/MM/YYYY',
+		widgetPositioning: {
+            horizontal: 'auto',
+            vertical: 'top'
+        }
+	});
 	$('.datepicker-start-up').datetimepicker({
 		format: 'DD/MM/YYYY h:mm A',
 		widgetPositioning: {
